@@ -1,0 +1,68 @@
+/*
+*	Elements - Creation
+*	
+*/
+
+
+/* Element Clear */ 	
+.creation-clear{content: "."; display: block;height: 0;clear: both;visibility: hidden;}
+
+
+/* Element box*/
+
+
+/* Element creation-resum */
+.creation-resum{
+		
+	h1,h2,h3,h4,h5{ margin:5px 0 5px 0; font-weight: 600;}
+	p{@extend %ph5;margin:5px 0 5px 0;padding:0;}
+	p:after{ content:" ...";font-weight: 600;color:$base03;font-size:3rem;}
+	.creation-resum-float{float:left; margin: 5px 5px 0 0;}
+	img{margin-bottom: 5px;}
+}
+
+.creation-resum:after{ @extend .creation-clear;}
+
+%creation-box-resum{
+	background-color:#fff;
+	h3,h4,h5{ }
+	div.creation-resum{ padding:2rem 2rem 2rem 2rem; }
+	div.creation-resum:first-child{ border-bottom:0.4rem solid $base05; }
+	div.creation-resum + div.creation-resum{ padding-right:2rem; 
+		border-bottom:0.4rem solid $base05;}
+	div.creation-resum:last-child{ border-bottom:0!important; }
+			
+}
+
+%creation-box-resum:after{ @extend .creation-clear; }
+
+	
+/* Element Conacatenats*/
+%creation-concatenats{ @extend %ph5;
+		.creation-camp{display: inline-block; span+span{padding-left:0.5rem;}
+	} 
+		
+	/* separador "|"*/
+	div:frist-child{} 
+	div + div:before {content:"|"; font-size: 0.8rem;position: relative; top: -2px;padding:0.5rem;}
+	div:last-child{} 
+}
+
+
+/* Titles Images */
+%creation-title-img-a{width:90%;  border-bottom:1px solid $base05;
+/*position*/padding:10px;position:relative;  background-color:#fff; margin:-55px 0 0 12px; }
+	
+%creation-title-img-b{  color:$base03;
+/*position*/padding:10px; position:relative; background-color:#fff; margin:-70px 0 0 12px; }
+	
+%creation-title-img-c{width:90%; 
+/*position*/padding:10px; position:relative; background-color:#fff; margin:-55px 0 0  0; }
+
+%creation-title-img-d{ color:$base02;
+/*position*/padding:10px; position:relative; background-color:$base04; margin:-70px 0 0 12px; }
+
+%creation-img-normal { outline:1px solid $base05;margin:2rem 0 2rem 0;}	 
+%creation-img-float { float:left;margin:0 2rem 2rem 0; outline:1px solid $base05;}
+%creation-body:after{ @extend .creation-clear;}
+%creation-caption{ background-color:$base05; padding:5px; @extend h6;}	 

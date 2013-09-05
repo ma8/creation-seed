@@ -1,0 +1,80 @@
+/*
+*	Creation - Responsive 
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*  
+*/
+
+@import "../creation/_creation"; 
+@import "_responsive-custom"; 
+
+.contextual-links{display:none;}
+.element-invisible{display:none;}
+
+
+/*Fluid images*/
+#logo img{ width: 100% !important; height: auto !important;}
+
+
+
+/**
+*	Fila  02:  Header	
+*/	@import "rows/_header";
+	/***** 02 Header-content */
+
+
+/**
+*	Fila 05:  Contingut 
+*/@import "rows/_content";
+	/***** 05 Contingut*/
+
+/**
+*	Fila 08:  Footer
+*/ 	@import "rows/_footer";
+	/***** 08 Footer */
+
+	
+
+	
+/* Estils at-breakpoint */
+/*All Elements**********************************************/	
+	
+/*All**/	
+	
+@include at-breakpoint($iphone4) { /*$iphone4 320px*/
+	
+	
+}/*$iphone4*/
+	
+	
+@include at-breakpoint($iphone4-landscape) { /*$iphone4-landscape 480px*/ 
+
+
+
+}/*$iphone4-landscape*/
+
+
+@include at-breakpoint($iphone5-landscape) { /*$iphone5-landscape 565px*/
+	
+	
+}/*$iphone5-landscape*/
+
+
+@include at-breakpoint($kindle) { /*$kindle*/
+
+
+	
+}/*$kindle*/
+
+@include at-breakpoint($ipad) {  /*$ipad*/
+
+	
+}/*$ipad*/
+
+
+@include at-breakpoint($ipad-landscape) { /*$ipad-landscape*/
+	
+		
+}/*$ipad-landscape*/
+	
+

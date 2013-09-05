@@ -1,0 +1,642 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*   Night Pencil + Magic + yummi-turquoise + J Peterman Shirt + winter morning
+*	Functions colors Sass:
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+*/
+/* Night Pencil */
+/* Magic */
+/* yummi-turquoise */
+/* J Peterman Shirt */
+/* winter morning */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Calculator Golden Ratio Golden Ratio http://www.pearsonified.com/typography/ */
+/*15px*/
+/*25px*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+* 	$font-a;contingut + $font-b;Headings + $font-c; especial
+*/
+/* line 10, ../../sass/creation/custom/_typography.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 11, ../../sass/creation/custom/_typography.scss */
+a {
+  color: #0083a9;
+  text-decoration: none;
+}
+
+/* line 12, ../../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings*/
+/* line 15, ../../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: -0.2rem;
+}
+
+/* line 16, ../../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.25rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 17, ../../sass/creation/custom/_typography.scss */
+h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 18, ../../sass/creation/custom/_typography.scss */
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 19, ../../sass/creation/custom/_typography.scss */
+h5 {
+  font-size: 1.245rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 20, ../../sass/creation/custom/_typography.scss */
+h6 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: -0.06rem;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 28, ../../sass/creation/custom/_typography.scss */
+.dipta-resum p {
+  font-size: 1.245rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}
+
+/* Blockquotes*/
+/* Box quotes */
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../../sass/creation/custom/_elements.scss */
+.dipta-clear, .dipta-resum:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* Element dipta-resum */
+/* line 63, ../../sass/creation/custom/_elements.scss */
+.dipta-resum h1, .dipta-resum h2, .dipta-resum h3, .dipta-resum h4, .dipta-resum h5 {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 64, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 65, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p:after {
+  content: " ...";
+  font-weight: 600;
+  color: #0083a9;
+  font-size: 3rem;
+}
+/* line 66, ../../sass/creation/custom/_elements.scss */
+.dipta-resum .dipta-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 67, ../../sass/creation/custom/_elements.scss */
+.dipta-resum img {
+  margin-bottom: 5px;
+}
+
+/* Element Conacatenats*/
+/* Titles Images */
+/*
+*	Images - Creation
+* 
+*/
+/*Slider -home */
+/* line 16, ../../sass/creation/custom/_images.scss */
+.btn-slider-left {
+  display: inline-block;
+  height: 36px;
+  width: 144px;
+  background-image: url("../images/bg-slideshowarrowleft.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 22, ../../sass/creation/custom/_images.scss */
+.btn-slider-left:hover {
+  background-image: url("../images/bg-slideshowarrowlefthover.png");
+}
+
+/* line 23, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth {
+  height: 36px;
+  width: 144px;
+  display: inline-block;
+  background-image: url("../images/bg-slideshowarrowright.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 29, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth:hover {
+  background-image: url("../images/bg-slideshowarrowrighthover.png");
+}
+
+/* line 31, ../../sass/creation/custom/_images.scss */
+.dipta-galeria {
+  background-color: #ccc;
+  width: 677px;
+  height: 112;
+}
+/* line 32, ../../sass/creation/custom/_images.scss */
+.dipta-galeria img {
+  margin: 1.7rem 1rem 0 2rem;
+}
+
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>10px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/* line 26, ../../sass/creation/_creation.scss */
+html {
+  color: #464646;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 52.5%;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 55.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 58.5%;
+  }
+}
+
+/* line 36, ../../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+
+/*Syntax custom*/
+/* line 46, ../../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 47, ../../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/* line 5, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-container-horizontal {
+  height: 85px;
+  width: 90%;
+  padding-bottom: 0;
+}
+/* line 10, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-clip-horizontal {
+  width: 100%;
+}
+/* line 13, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-item {
+  border: none;
+  background: transparent;
+}
+/* line 17, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-item-horizontal {
+  margin: 0;
+}
+/* line 20, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-next {
+  background: url(../../images/carousel-next.png) no-repeat left top;
+}
+/* line 22, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-next:hover {
+  background-position: left top;
+}
+/* line 27, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-next-horizontal {
+  right: 0;
+}
+/* line 30, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-prev {
+  background: url(../../images/carousel-prev.png) no-repeat left top;
+}
+/* line 32, ../../sass/partials/jcarousel.scss */
+.jcarousel-skin-default .jcarousel-prev:hover {
+  background-position: left top;
+}
+
+/*fin skin-default*/
+/* Corporate caroussel */
+/* line 42, ../../sass/partials/jcarousel.scss */
+.corporate .jcarousel-skin-default .jcarousel-clip-horizontal {
+  border-left: 1px solid #e6e6e6;
+}
+/* line 45, ../../sass/partials/jcarousel.scss */
+.corporate .jcarousel-skin-default .jcarousel-item {
+  height: 65px;
+  width: 99px;
+  padding: 10px;
+  border-right: 1px solid #e6e6e6;
+}
+/* line 51, ../../sass/partials/jcarousel.scss */
+.corporate .jcarousel-skin-default .jcarousel-next {
+  background-image: url(../../images/carousel-home-next.png);
+}
+/* line 54, ../../sass/partials/jcarousel.scss */
+.corporate .jcarousel-skin-default .jcarousel-prev {
+  background-image: url(../../images/carousel-home-prev.png);
+}
+
+/* Detail page with caroussel */
+/* line 61, ../../sass/partials/jcarousel.scss */
+.field-name-field-galeria-noticia, .field-name-field-dipta-carretera-galeria, .field-name-field-imatges-galeria {
+  margin: 2%;
+  margin-top: 3%;
+}
+/* line 66, ../../sass/partials/jcarousel.scss */
+.field-name-field-galeria-noticia .jcarousel-skin-default .jcarousel-container-horizontal, .field-name-field-dipta-carretera-galeria .jcarousel-skin-default .jcarousel-container-horizontal, .field-name-field-imatges-galeria .jcarousel-skin-default .jcarousel-container-horizontal {
+  padding-top: 2%!important;
+  padding-bottom: 2%!important;
+  background-color: #EBEBEB;
+}
+/* line 67, ../../sass/partials/jcarousel.scss */
+.field-name-field-galeria-noticia .jcarousel-skin-default .jcarousel-item, .field-name-field-dipta-carretera-galeria .jcarousel-skin-default .jcarousel-item, .field-name-field-imatges-galeria .jcarousel-skin-default .jcarousel-item {
+  height: 75px;
+  width: 100px;
+  padding: 4px;
+  margin: 3px;
+  background-color: #fff;
+}
+/* line 74, ../../sass/partials/jcarousel.scss */
+.field-name-field-galeria-noticia .jcarousel-skin-default .jcarousel-prev, .field-name-field-galeria-noticia .jcarousel-skin-default .jcarousel-next, .field-name-field-dipta-carretera-galeria .jcarousel-skin-default .jcarousel-prev, .field-name-field-dipta-carretera-galeria .jcarousel-skin-default .jcarousel-next, .field-name-field-imatges-galeria .jcarousel-skin-default .jcarousel-prev, .field-name-field-imatges-galeria .jcarousel-skin-default .jcarousel-next {
+  width: 20px;
+}
+
+/* line 81, ../../sass/partials/jcarousel.scss */
+div#content .jcarousel-container:before {
+  font-size: 17px;
+  line-height: 2em;
+  position: absolute;
+  font-weight: 300;
+  top: -43px;
+  left: 0;
+}
+
+/*BUG: solucio temporal al responsive jcarousel*/
+/* line 94, ../../sass/partials/jcarousel.scss */
+.jcarousel-container-horizontal {
+  padding-right: 5% !important;
+  padding-left: 5% !important;
+}

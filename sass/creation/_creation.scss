@@ -1,0 +1,90 @@
+﻿/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputació de Tarragona.
+ * @Miguel Ángel Ramos. 
+ *
+ */
+  
+ 
+ /* Compass*/ 
+@import "compass/css3"; 
+@import "compass/utilities";
+/* Creation base */
+@import "base/_syntax";
+@import "base/_colors"; 
+@import "base/_font";
+/* Creation custom*/
+@import "custom/_typography";
+@import "custom/_elements";
+@import "custom/_images";
+@import "custom/_navigations";
+@import "custom/_tables";
+@import "custom/_forms";
+/*Creation layouts*/
+@import "layouts/_responsive-creation";	
+
+html {  
+	color:$base01;
+	/*All*/
+	font-size:62.5%;
+	/*Typography responsive*/
+	/*@include at-breakpoint($iphone4) { font-size:52.5%;}
+	 @include at-breakpoint($iphone4-landscape) { font-size:55.5%; }
+	 @include at-breakpoint($iphone5-landscape) { font-size:58.5%; } */
+  }
+	
+body{
+	/*$font1: 'Open Sans', sans-serif;*/
+	margin:0;
+	font-family:$font-r;
+	font-size:1.6rem;
+	line-height:2.5rem;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	/*Typography responsive*/
+	 @include at-breakpoint($iphone4) { font-size:1rem; line-height:2rem; margin:2rem 0;}
+	 @include at-breakpoint($iphone4-landscape) { font-size:1.1rem; line-height:2.1rem; margin:2.1rem 0;}
+	 @include at-breakpoint($iphone5-landscape) {font-size:1.1rem; line-height:2.1rem; margin:2.1rem 0; } 
+}
+
+
+/*Syntax custom*/
+code{ font-size:1.2rem;  font-family: Consolas,Monaco,"Andale Mono",monospace;}
+pre{overflow-x: scroll !important;overflow-y: scroll !important;}
+
+/*Typography responsive*/	
+
+h1{
+	/*H1 responsive*/
+	 @include at-breakpoint($iphone4) { font-size: $h3-s;line-height: $h3-h;letter-spacing:$h3-ls;margin:$h3-h 0;}
+	 @include at-breakpoint($iphone4-landscape) {font-size: $h3-s;line-height: $h3-h; letter-spacing:$h3-ls;margin:$h3-h 0;}
+	 @include at-breakpoint($iphone5-landscape) {font-size: $h3-s;line-height: $h3-h; letter-spacing:$h3-ls;margin:$h3-h 0; } 
+}
+
+h2{
+	/*H2 responsive*/
+	 @include at-breakpoint($iphone4) { font-size: $h3-s;line-height: $h3-h;letter-spacing:$h3-ls;margin:$h3-h 0;}
+	 @include at-breakpoint($iphone4-landscape) {font-size: $h3-s;line-height: $h3-h;letter-spacing:$h3-ls;margin:$h3-h 0;}
+	 @include at-breakpoint($iphone5-landscape) {font-size: $h3-s;line-height: $h3-h;letter-spacing:$h3-ls;margin:$h3-h 0;} 
+}
+
+h3{
+	/*H3 responsive*/
+	 @include at-breakpoint($iphone4) { font-size: $h4-s;line-height: $h4-h;letter-spacing:$h4-ls;margin:$h4-h 0;}
+	 @include at-breakpoint($iphone4-landscape) {font-size: $h4-s;line-height: $h4-h;letter-spacing:$h4-ls;margin:$h4-h 0;}
+	 @include at-breakpoint($iphone5-landscape) {font-size: $h4-s;line-height: $h4-h; letter-spacing:$h4-ls;margin:$h4-h 0;} 
+}
+ 
+h5{
+	/*H4 responsive*/
+	 @include at-breakpoint($iphone4) { font-size: $h6-s;line-height: $h6-h;letter-spacing:$h6-ls;margin:$h6-h 0;}
+	 @include at-breakpoint($iphone4-landscape) {font-size: $h6-s;line-height: $h6-h;letter-spacing:$h6-ls;margin:$h6-h 0;}
+	 @include at-breakpoint($iphone5-landscape) {font-size: $h6-s;line-height: $h6-h; letter-spacing:$h6-ls;margin:$h6-h 0;} 
+}
+
+h6{
+	/*H4 responsive*/
+	 @include at-breakpoint($iphone4) { font-size: $h6-s*0.9;line-height: $h6-h*0.9;letter-spacing:$h6-ls;margin:$h6-h 0;}
+	 @include at-breakpoint($iphone4-landscape) { font-size: $h6-s*0.9;line-height: $h6-h*0.9;letter-spacing:$h6-ls;margin:$h6-h 0;}
+	 @include at-breakpoint($iphone5-landscape) { font-size: $h6-s*0.9;line-height: $h6-h*0.9;letter-spacing:$h6-ls;margin:$h6-h 0;} 
+}

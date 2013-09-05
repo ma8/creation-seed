@@ -1,0 +1,942 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+/***** VIEWS PAGES ******************************************************************************
+* [Home - Noticies] + [HOME - Agenda]
+*
+*/
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*   Night Pencil + Magic + yummi-turquoise + J Peterman Shirt + winter morning
+*	Functions colors Sass:
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+*/
+/* Night Pencil */
+/* Magic */
+/* yummi-turquoise */
+/* J Peterman Shirt */
+/* winter morning */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Calculator Golden Ratio Golden Ratio http://www.pearsonified.com/typography/ */
+/*15px*/
+/*25px*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+* 	$font-a;contingut + $font-b;Headings + $font-c; especial
+*/
+/* line 10, ../../sass/creation/custom/_typography.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 11, ../../sass/creation/custom/_typography.scss */
+a {
+  color: #0083a9;
+  text-decoration: none;
+}
+
+/* line 12, ../../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings*/
+/* line 15, ../../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: -0.2rem;
+}
+
+/* line 16, ../../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.25rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 17, ../../sass/creation/custom/_typography.scss */
+h3, .view-display-id-page h2, #block-views-actes-agenda-block-3 h2,
+#block-views-carretera-block-1 h2, #block-views-carretera-block-5 h2, #block-views-area-unitats-block-1 .dipta-resum-arees h2 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 18, ../../sass/creation/custom/_typography.scss */
+h4, .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 19, ../../sass/creation/custom/_typography.scss */
+h5, .view-display-id-page_1 .more-link, .view-display-id-block_2 .more-link {
+  font-size: 1.245rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 20, ../../sass/creation/custom/_typography.scss */
+h6 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: -0.06rem;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 28, ../../sass/creation/custom/_typography.scss */
+.dipta-entorn-web-arees .unitats p, .dipta-entorn-web-arees .contacta p, #block-views-area-unitats-block-1 .dipta-resum-arees p, .dipta-resum p, #block-views-area-unitats-block-1 .dipta-resum-arees ul li, #block-views-area-unitats-block-1 .dipta-resum-arees .group-basic-etitext .dipta-camp, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable .dipta-camp, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable .dipta-camp h2 {
+  font-size: 1.245rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}
+
+/* line 32, ../../sass/creation/custom/_typography.scss */
+.view-display-id-page_1 .view-header h2, #block-views-actes-agenda-block-2 h2, .view-display-id-page h2, #block-views-actes-agenda-block-3 h2,
+#block-views-carretera-block-1 h2, #block-views-carretera-block-5 h2 {
+  padding: 2rem 0 2rem 5rem;
+  margin: 0;
+  background: url("../../images/escut-dipta.png") no-repeat;
+  background-position: 2rem 2.1rem;
+}
+
+/* Blockquotes*/
+/* Box quotes */
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../../sass/creation/custom/_elements.scss */
+.dipta-clear, .dipta-resum:after, .view-display-id-page_1 .view-content:after, .view-display-id-block_2 .view-content:after, .view-display-id-page .view-content:after, #block-views-actes-agenda-block-3 .view-content:after,
+#block-views-carretera-block-1 .view-content:after, #block-views-carretera-block-5 .view-content:after, .view-display-id-block_2 .view-content div.dipta-resum a:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* line 13, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-header h2, #block-views-actes-agenda-block-2 h2, .view-display-id-page h2, #block-views-actes-agenda-block-3 h2,
+#block-views-carretera-block-1 h2, #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .contacta h1, #block-views-area-unitats-block-1 .dipta-resum-arees h1, .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page h2, .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 h2, #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta h2, .dipta-entorn-web-arees .contacta h4, #block-views-area-unitats-block-1 .dipta-resum-arees h4, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .view-display-id-page .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, .dipta-entorn-web-arees .contacta h5, #block-views-area-unitats-block-1 .dipta-resum-arees h5, .dipta-entorn-web-arees .contacta .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page_1 .more-link, .view-display-id-page_1 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-block_2 .more-link, .view-display-id-block_2 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta h6, #block-views-area-unitats-block-1 .dipta-resum-arees h6 {
+  border-top: 0.4rem solid #0083a9;
+}
+
+/* line 14, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .unitats h1, .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats h3, .dipta-entorn-web-arees .unitats .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats h2,
+.dipta-entorn-web-arees .unitats #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats h4, .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats h5, .dipta-entorn-web-arees .unitats .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-entorn-web-arees .unitats .more-link, .dipta-entorn-web-arees .unitats .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-entorn-web-arees .unitats .more-link, .dipta-entorn-web-arees .unitats h6, .dipta-entorn-web-arees .contacta h1, #block-views-area-unitats-block-1 .dipta-resum-arees h1, .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page h2, .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 h2, #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta h2, .dipta-entorn-web-arees .contacta h4, #block-views-area-unitats-block-1 .dipta-resum-arees h4, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .view-display-id-page .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, .dipta-entorn-web-arees .contacta h5, #block-views-area-unitats-block-1 .dipta-resum-arees h5, .dipta-entorn-web-arees .contacta .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page_1 .more-link, .view-display-id-page_1 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-block_2 .more-link, .view-display-id-block_2 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta h6, #block-views-area-unitats-block-1 .dipta-resum-arees h6 {
+  border-bottom: 0.4rem solid white;
+}
+
+/* line 22, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .unitats {
+  background-color: #ebebeb;
+}
+/* line 24, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .unitats h1, .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats h3, .dipta-entorn-web-arees .unitats .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats h2,
+.dipta-entorn-web-arees .unitats #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats h2, .dipta-entorn-web-arees .unitats h4, .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats h5, .dipta-entorn-web-arees .unitats .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-entorn-web-arees .unitats .more-link, .dipta-entorn-web-arees .unitats .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-entorn-web-arees .unitats .more-link, .dipta-entorn-web-arees .unitats h6 {
+  padding: 2rem;
+}
+/* line 25, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .unitats p {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  color: #014b60;
+}
+
+/* line 45, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .contacta, #block-views-area-unitats-block-1 .dipta-resum-arees {
+  background-color: #ebebeb;
+}
+/* line 47, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .contacta h1, #block-views-area-unitats-block-1 .dipta-resum-arees h1, .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page h2, .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 h2, #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta h4, #block-views-area-unitats-block-1 .dipta-resum-arees h4, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h3, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h3, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page #block-views-area-unitats-block-1 .dipta-resum-arees h2, .view-display-id-page .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+.dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 #block-views-area-unitats-block-1 .dipta-resum-arees h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2,
+#block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .contacta .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees .contacta h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .contacta .unitats .node-dipta-area h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .contacta h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .contacta h5, #block-views-area-unitats-block-1 .dipta-resum-arees h5, .dipta-entorn-web-arees .contacta .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-page_1 .more-link, .view-display-id-page_1 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-entorn-web-arees .contacta .more-link, #block-views-area-unitats-block-1 .dipta-resum-arees .view-display-id-block_2 .more-link, .view-display-id-block_2 #block-views-area-unitats-block-1 .dipta-resum-arees .more-link, .dipta-entorn-web-arees .contacta h6, #block-views-area-unitats-block-1 .dipta-resum-arees h6 {
+  padding: 2rem;
+}
+/* line 48, ../../sass/creation/custom/_elements.scss */
+.dipta-entorn-web-arees .contacta p, #block-views-area-unitats-block-1 .dipta-resum-arees p {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  color: #014b60;
+}
+
+/* Element dipta-resum */
+/* line 63, ../../sass/creation/custom/_elements.scss */
+.dipta-resum h1, .dipta-resum h2, .dipta-resum h3, .dipta-resum .view-display-id-page h2, .view-display-id-page .dipta-resum h2, .dipta-resum #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-resum h2,
+.dipta-resum #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-resum h2, .dipta-resum #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-resum h2, .dipta-resum #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-resum h2, .dipta-resum h4, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h3, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page .dipta-resum h2, .dipta-resum .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 .dipta-resum h2, .dipta-resum #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2,
+.dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 .dipta-resum h2,
+.dipta-resum #block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 .dipta-resum h2, .dipta-resum #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2, .dipta-resum .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-resum h2, .dipta-resum #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area .dipta-resum h2, .dipta-resum h5, .dipta-resum .view-display-id-page_1 .more-link, .view-display-id-page_1 .dipta-resum .more-link, .dipta-resum .view-display-id-block_2 .more-link, .view-display-id-block_2 .dipta-resum .more-link {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 64, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 65, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p:after {
+  content: " ...";
+  font-weight: 600;
+  color: #0083a9;
+  font-size: 3rem;
+}
+/* line 66, ../../sass/creation/custom/_elements.scss */
+.dipta-resum .dipta-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 67, ../../sass/creation/custom/_elements.scss */
+.dipta-resum img {
+  margin-bottom: 5px;
+}
+
+/* line 72, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-content, .view-display-id-block_2 .view-content, .view-display-id-page .view-content, #block-views-actes-agenda-block-3 .view-content,
+#block-views-carretera-block-1 .view-content, #block-views-carretera-block-5 .view-content {
+  background-color: #fff;
+}
+/* line 75, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-content div.dipta-resum, .view-display-id-block_2 .view-content div.dipta-resum, .view-display-id-page .view-content div.dipta-resum, #block-views-actes-agenda-block-3 .view-content div.dipta-resum,
+#block-views-carretera-block-1 .view-content div.dipta-resum, #block-views-carretera-block-5 .view-content div.dipta-resum {
+  padding: 2rem 2rem 2rem 2rem;
+}
+/* line 76, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-content div.dipta-resum:first-child, .view-display-id-block_2 .view-content div.dipta-resum:first-child, .view-display-id-page .view-content div.dipta-resum:first-child, #block-views-actes-agenda-block-3 .view-content div.dipta-resum:first-child,
+#block-views-carretera-block-1 .view-content div.dipta-resum:first-child, #block-views-carretera-block-5 .view-content div.dipta-resum:first-child {
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 77, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-content div.dipta-resum + div.dipta-resum, .view-display-id-block_2 .view-content div.dipta-resum + div.dipta-resum, .view-display-id-page .view-content div.dipta-resum + div.dipta-resum, #block-views-actes-agenda-block-3 .view-content div.dipta-resum + div.dipta-resum,
+#block-views-carretera-block-1 .view-content div.dipta-resum + div.dipta-resum, #block-views-carretera-block-5 .view-content div.dipta-resum + div.dipta-resum {
+  padding-right: 2rem;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 79, ../../sass/creation/custom/_elements.scss */
+.view-display-id-page_1 .view-content div.dipta-resum:last-child, .view-display-id-block_2 .view-content div.dipta-resum:last-child, .view-display-id-page .view-content div.dipta-resum:last-child, #block-views-actes-agenda-block-3 .view-content div.dipta-resum:last-child,
+#block-views-carretera-block-1 .view-content div.dipta-resum:last-child, #block-views-carretera-block-5 .view-content div.dipta-resum:last-child {
+  border-bottom: 0!important;
+}
+
+/* Element Conacatenats*/
+/* Titles Images */
+/*
+*	Images - Creation
+* 
+*/
+/*Slider -home */
+/* line 16, ../../sass/creation/custom/_images.scss */
+.btn-slider-left {
+  display: inline-block;
+  height: 36px;
+  width: 144px;
+  background-image: url("../images/bg-slideshowarrowleft.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 22, ../../sass/creation/custom/_images.scss */
+.btn-slider-left:hover {
+  background-image: url("../images/bg-slideshowarrowlefthover.png");
+}
+
+/* line 23, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth {
+  height: 36px;
+  width: 144px;
+  display: inline-block;
+  background-image: url("../images/bg-slideshowarrowright.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 29, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth:hover {
+  background-image: url("../images/bg-slideshowarrowrighthover.png");
+}
+
+/* line 31, ../../sass/creation/custom/_images.scss */
+.dipta-galeria {
+  background-color: #ccc;
+  width: 677px;
+  height: 112;
+}
+/* line 32, ../../sass/creation/custom/_images.scss */
+.dipta-galeria img {
+  margin: 1.7rem 1rem 0 2rem;
+}
+
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>10px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/* line 26, ../../sass/creation/_creation.scss */
+html {
+  color: #464646;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 52.5%;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 55.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 58.5%;
+  }
+}
+
+/* line 36, ../../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+
+/*Syntax custom*/
+/* line 46, ../../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 47, ../../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/* line 11, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-header {
+  padding: 0;
+}
+/* line 12, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-header h2 {
+  color: #0083a9;
+  clear: both;
+  background-color: #fff;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+/* line 13, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content div.dipta-resum {
+  /*float:left; width:44.0%;*/
+}
+/* line 14, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content div.dipta-resum:first-child {
+  padding-right: 1.8rem;
+  border-right: 0.4rem solid #ebebeb;
+  border-bottom: 0;
+}
+/* line 15, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content div.dipta-resum + div.dipta-resum {
+  border-bottom: 0.4rem solid #ebebeb;
+  border-left: 0;
+}
+/* line 16, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content div.dipta-resum:last-child {
+  border-bottom: 0!important;
+}
+/* line 18, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .more-link {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+/* line 22, ../../sass/partials/views-pages.scss */
+#block-views-actes-agenda-block-2 {
+  margin-top: 2rem;
+  padding: 0;
+}
+/* line 23, ../../sass/partials/views-pages.scss */
+#block-views-actes-agenda-block-2 h2 {
+  color: #0083a9;
+  background-color: #fff;
+  border-bottom: 0.4rem solid #ebebeb;
+}
+
+/* line 26, ../../sass/partials/views-pages.scss */
+.view-display-id-block_2 .view-content div.dipta-resum .float {
+  padding-right: 2rem;
+}
+/* line 27, ../../sass/partials/views-pages.scss */
+.view-display-id-block_2 .view-content div.dipta-resum:first-child {
+  border-bottom: 0.4rem solid #ebebeb;
+  border-right: 0;
+}
+/* line 28, ../../sass/partials/views-pages.scss */
+.view-display-id-block_2 .view-content div.dipta-resum + div.dipta-resum {
+  border-bottom: 0.4rem solid #ebebeb;
+  border-left: 0;
+}
+/* line 30, ../../sass/partials/views-pages.scss */
+.view-display-id-block_2 .more-link {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+/* line 36, ../../sass/partials/views-pages.scss */
+.view-display-id-page, #block-views-actes-agenda-block-3,
+#block-views-carretera-block-1, #block-views-carretera-block-5 {
+  margin: 0 2% 0 2%;
+  /*title actes permamnents*/
+}
+/* line 39, ../../sass/partials/views-pages.scss */
+.view-display-id-page .dipta-resum, #block-views-actes-agenda-block-3 .dipta-resum,
+#block-views-carretera-block-1 .dipta-resum, #block-views-carretera-block-5 .dipta-resum {
+  background-color: #ebebeb;
+  border-bottom: 0.4rem solid white !important;
+  width: 43%;
+}
+/* line 40, ../../sass/partials/views-pages.scss */
+.view-display-id-page .dipta-resum:nth-child(even), #block-views-actes-agenda-block-3 .dipta-resum:nth-child(even),
+#block-views-carretera-block-1 .dipta-resum:nth-child(even), #block-views-carretera-block-5 .dipta-resum:nth-child(even) {
+  float: right;
+  clear: right;
+}
+/* line 41, ../../sass/partials/views-pages.scss */
+.view-display-id-page .dipta-resum:nth-child(odd), #block-views-actes-agenda-block-3 .dipta-resum:nth-child(odd),
+#block-views-carretera-block-1 .dipta-resum:nth-child(odd), #block-views-carretera-block-5 .dipta-resum:nth-child(odd) {
+  float: left;
+  clear: left;
+}
+/* line 43, ../../sass/partials/views-pages.scss */
+.view-display-id-page h2, #block-views-actes-agenda-block-3 h2,
+#block-views-carretera-block-1 h2, #block-views-carretera-block-5 h2 {
+  border-bottom: 0.4rem solid white;
+  background-color: #ebebeb;
+  color: #0083a9;
+  margin-top: 50px;
+}
+
+/* line 49, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .contacta {
+  margin: 0 2%;
+}
+/* line 51, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .area .node-dipta-area .dipta-camp {
+  margin-left: 20px;
+  display: inline-block;
+  padding: 0.5%;
+  padding-left: 2%;
+  font-size: 11px;
+}
+/* line 53, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .unitats {
+  margin: 0 2%;
+}
+/* line 54, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .unitats .node-dipta-area {
+  border-bottom: 0.4rem solid white;
+}
+/* line 55, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area h3, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  margin-top: 5px;
+}
+/* line 55, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .unitats .node-dipta-area h2 a, .dipta-entorn-web-arees .unitats .node-dipta-area h3 a, .dipta-entorn-web-arees .unitats .node-dipta-area .view-display-id-page h2 a, .view-display-id-page .dipta-entorn-web-arees .unitats .node-dipta-area h2 a, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-actes-agenda-block-3 h2 a, #block-views-actes-agenda-block-3 .dipta-entorn-web-arees .unitats .node-dipta-area h2 a,
+.dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-1 h2 a,
+#block-views-carretera-block-1 .dipta-entorn-web-arees .unitats .node-dipta-area h2 a, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-carretera-block-5 h2 a, #block-views-carretera-block-5 .dipta-entorn-web-arees .unitats .node-dipta-area h2 a, .dipta-entorn-web-arees .unitats .node-dipta-area #block-views-area-unitats-block-1 .dipta-resum-arees h2 a, #block-views-area-unitats-block-1 .dipta-resum-arees .dipta-entorn-web-arees .unitats .node-dipta-area h2 a {
+  color: #014B60;
+}
+/* line 56, ../../sass/partials/views-pages.scss */
+.dipta-entorn-web-arees .unitats .node-dipta-area .dipta-camp {
+  display: inline-block;
+  padding: 0;
+  font-size: 11px;
+  margin-left: 20px;
+}
+
+/* line 65, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 {
+  margin: 0 2% 0 2%;
+}
+/* line 67, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees {
+  padding-bottom: 20px;
+}
+/* line 70, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees ul {
+  padding-left: 30px;
+}
+/* line 71, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees ul li {
+  padding: 0 2%;
+  color: #014b60;
+}
+/* line 72, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .group-basic-etitext {
+  margin: 0 2%;
+}
+/* line 73, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .group-basic-etitext .dipta-camp {
+  display: inline-block;
+  margin-right: 2%;
+}
+/* line 74, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .group-basic-etitext .dipta-camp:first-child {
+  font-weight: 600;
+}
+/* line 76, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable {
+  margin: 0 2%;
+}
+/* line 78, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable .dipta-camp {
+  display: inline-block;
+  margin-right: 2%;
+}
+/* line 79, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable .dipta-camp h2 {
+  border: 0;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+/* line 80, ../../sass/partials/views-pages.scss */
+#block-views-area-unitats-block-1 .dipta-resum-arees .dipta-responsable .dipta-camp:first-child {
+  font-weight: 600;
+}
+
+/*
+ * Views' admin tabs
+ *
+ * The views admin tabs use the same classes as the secondary tabs. We prevent
+ * some of our tab styling from bleeding into (and breaking) the Views admin
+ * pages. If your sub-theme isn't used for admin pages, you can remove this
+ * entire section.
+ */
+/* line 100, ../../sass/partials/views-pages.scss */
+.views-displays .secondary li {
+  float: none;
+  margin: 0 6px 0;
+}
+/* line 106, ../../sass/partials/views-pages.scss */
+.views-displays .secondary a:link,
+.views-displays .secondary a:visited {
+  text-shadow: none;
+  padding: 2px 7px 3px;
+}
+/* line 111, ../../sass/partials/views-pages.scss */
+.views-displays .secondary .open > a {
+  -webkit-border-radius: 7px 7px 0 0;
+  -moz-border-radius: 7px 7px 0 0;
+  -ms-border-radius: 7px 7px 0 0;
+  -o-border-radius: 7px 7px 0 0;
+  border-radius: 7px 7px 0 0;
+}
+/* line 113, ../../sass/partials/views-pages.scss */
+.views-displays .secondary .open > a:hover {
+  color: #333;
+}
+/* line 118, ../../sass/partials/views-pages.scss */
+.views-displays .secondary .action-list li {
+  margin: 0;
+}
+/* line 120, ../../sass/partials/views-pages.scss */
+.views-displays .secondary .action-list li:first-child {
+  -webkit-border-radius: 0 7px 0 0;
+  -moz-border-radius: 0 7px 0 0;
+  -ms-border-radius: 0 7px 0 0;
+  -o-border-radius: 0 7px 0 0;
+  border-radius: 0 7px 0 0;
+}
+/* line 123, ../../sass/partials/views-pages.scss */
+.views-displays .secondary .action-list li:last-child {
+  -webkit-border-radius: 0 0 7px 7px;
+  -moz-border-radius: 0 0 7px 7px;
+  -ms-border-radius: 0 0 7px 7px;
+  -o-border-radius: 0 0 7px 7px;
+  border-radius: 0 0 7px 7px;
+}
+
+/* line 130, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-header {
+  /* border-bottom: 2px solid #ebebeb;*/
+  padding-top: 12px 0;
+  position: relative;
+}
+/* line 135, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content {
+  overflow: hidden;
+}
+/* line 137, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content .views-row {
+  clear: right;
+  float: right;
+}
+/* line 141, ../../sass/partials/views-pages.scss */
+.view-display-id-page_1 .view-content .views-row-first {
+  float: left;
+}

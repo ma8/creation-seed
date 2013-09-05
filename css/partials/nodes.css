@@ -1,0 +1,1202 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*   Night Pencil + Magic + yummi-turquoise + J Peterman Shirt + winter morning
+*	Functions colors Sass:
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+*/
+/* Night Pencil */
+/* Magic */
+/* yummi-turquoise */
+/* J Peterman Shirt */
+/* winter morning */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Calculator Golden Ratio Golden Ratio http://www.pearsonified.com/typography/ */
+/*15px*/
+/*25px*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/*size*/
+/*line-height*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Imports + Golden ratio + responsive typography
+* 	$font-a;contingut + $font-b;Headings + $font-c; especial
+*/
+/* line 10, ../../sass/creation/custom/_typography.scss */
+p {
+  font-weight: 300;
+}
+
+/* line 11, ../../sass/creation/custom/_typography.scss */
+a {
+  color: #0083a9;
+  text-decoration: none;
+}
+
+/* line 12, ../../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Headings*/
+/* line 15, ../../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  letter-spacing: -0.2rem;
+}
+
+/* line 16, ../../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 3.25rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 17, ../../sass/creation/custom/_typography.scss */
+h3 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 18, ../../sass/creation/custom/_typography.scss */
+h4, .dipta-subtitol, #content .field-group-format h2, .title-camp, .view-diputats-d-un-partit h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 19, ../../sass/creation/custom/_typography.scss */
+h5, #content .dipta-camp div.label-inline {
+  font-size: 1.245rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: -0.06rem;
+}
+
+/* line 20, ../../sass/creation/custom/_typography.scss */
+h6, .field-slideshow-caption {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: -0.06rem;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 27, ../../sass/creation/custom/_typography.scss */
+blockquote, .dipta-txt-navegacio {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 2.1rem;
+  letter-spacing: 0;
+}
+
+/* line 28, ../../sass/creation/custom/_typography.scss */
+.related-content p, .dipta-resum p, .seccions-destacades .destacat-content p, .dipta-concatenats, .related-content ul li {
+  font-size: 1.245rem;
+  font-weight: 100;
+  line-height: 1.8rem;
+  letter-spacing: 0;
+}
+
+/* line 32, ../../sass/creation/custom/_typography.scss */
+.seccions-destacades h2 {
+  padding: 2rem 0 2rem 5rem;
+  margin: 0;
+  background: url("../../images/escut-dipta.png") no-repeat;
+  background-position: 2rem 2.1rem;
+}
+
+/* Blockquotes*/
+/* line 40, ../../sass/creation/custom/_typography.scss */
+blockquote, .dipta-txt-navegacio {
+  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+
+/* line 41, ../../sass/creation/custom/_typography.scss */
+.dipta-txt-navegacio:before {
+  display: block;
+  content: "\201C";
+  font-family: Georgia, serif;
+  font-size: 9rem;
+  position: absolute;
+  color: #7a7a7a;
+  margin-left: -45px;
+  margin-top: 25px;
+}
+
+/* line 46, ../../sass/creation/custom/_typography.scss */
+blockquote {
+  font-weight: 100;
+  padding: 2.3%;
+}
+
+/* line 58, ../../sass/creation/custom/_typography.scss */
+.dipta-txt-navegacio {
+  font-weight: 100;
+  margin-left: 5%;
+  padding: 2.3% 2.3% 2.3% 5.3%;
+}
+
+/* Box quotes */
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../../sass/creation/custom/_elements.scss */
+.dipta-clear, .dipta-resum:after, .seccions-destacades .destacat-content:after, #content .dipta-cos:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* line 13, ../../sass/creation/custom/_elements.scss */
+.seccions-destacades h2, .related-content h1, .related-content h2, .related-content h3, .related-content h4, .related-content .dipta-subtitol, .related-content #content .field-group-format h2, #content .field-group-format .related-content h2, .related-content .title-camp, .related-content .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .related-content h3, .related-content h5, .related-content #content .dipta-camp div.label-inline, #content .dipta-camp .related-content div.label-inline, .related-content h6, .related-content .field-slideshow-caption {
+  border-top: 0.4rem solid #0083a9;
+}
+
+/* line 14, ../../sass/creation/custom/_elements.scss */
+.related-content h1, .related-content h2, .related-content h3, .related-content h4, .related-content .dipta-subtitol, .related-content #content .field-group-format h2, #content .field-group-format .related-content h2, .related-content .title-camp, .related-content .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .related-content h3, .related-content h5, .related-content #content .dipta-camp div.label-inline, #content .dipta-camp .related-content div.label-inline, .related-content h6, .related-content .field-slideshow-caption {
+  border-bottom: 0.4rem solid white;
+}
+
+/* line 45, ../../sass/creation/custom/_elements.scss */
+.related-content {
+  background-color: #ebebeb;
+}
+/* line 47, ../../sass/creation/custom/_elements.scss */
+.related-content h1, .related-content h2, .related-content h3, .related-content h4, .related-content .dipta-subtitol, .related-content #content .field-group-format h2, #content .field-group-format .related-content h2, .related-content .title-camp, .related-content .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .related-content h3, .related-content h5, .related-content #content .dipta-camp div.label-inline, #content .dipta-camp .related-content div.label-inline, .related-content h6, .related-content .field-slideshow-caption {
+  padding: 2rem;
+}
+/* line 48, ../../sass/creation/custom/_elements.scss */
+.related-content p {
+  padding: 0 2rem 2rem 2rem;
+  border: 0;
+  color: #014b60;
+}
+
+/* Element dipta-resum */
+/* line 63, ../../sass/creation/custom/_elements.scss */
+.dipta-resum h1, .seccions-destacades .destacat-content h1, .dipta-resum h2, .seccions-destacades .destacat-content h2, .dipta-resum h3, .seccions-destacades .destacat-content h3, .dipta-resum h4, .seccions-destacades .destacat-content h4, .dipta-resum .dipta-subtitol, .seccions-destacades .destacat-content .dipta-subtitol, .dipta-resum #content .field-group-format h2, #content .field-group-format .dipta-resum h2, .seccions-destacades .destacat-content #content .field-group-format h2, #content .field-group-format .seccions-destacades .destacat-content h2, .dipta-resum .title-camp, .seccions-destacades .destacat-content .title-camp, .dipta-resum .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .dipta-resum h3, .seccions-destacades .destacat-content .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .seccions-destacades .destacat-content h3, .dipta-resum h5, .seccions-destacades .destacat-content h5, .dipta-resum #content .dipta-camp div.label-inline, #content .dipta-camp .dipta-resum div.label-inline, .seccions-destacades .destacat-content #content .dipta-camp div.label-inline, #content .dipta-camp .seccions-destacades .destacat-content div.label-inline {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 64, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p, .seccions-destacades .destacat-content p {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 65, ../../sass/creation/custom/_elements.scss */
+.dipta-resum p:after, .seccions-destacades .destacat-content p:after {
+  content: " ...";
+  font-weight: 600;
+  color: #0083a9;
+  font-size: 3rem;
+}
+/* line 66, ../../sass/creation/custom/_elements.scss */
+.dipta-resum .dipta-resum-float, .seccions-destacades .destacat-content .dipta-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 67, ../../sass/creation/custom/_elements.scss */
+.dipta-resum img, .seccions-destacades .destacat-content img {
+  margin-bottom: 5px;
+}
+
+/* Element Conacatenats*/
+/* line 87, ../../sass/creation/custom/_elements.scss */
+.dipta-concatenats {
+  /* separador "|"*/
+}
+/* line 88, ../../sass/creation/custom/_elements.scss */
+.dipta-concatenats .dipta-camp {
+  display: inline-block;
+}
+/* line 88, ../../sass/creation/custom/_elements.scss */
+.dipta-concatenats .dipta-camp span + span {
+  padding-left: 0.5rem;
+}
+/* line 93, ../../sass/creation/custom/_elements.scss */
+.dipta-concatenats div + div:before {
+  content: "|";
+  font-size: 0.8rem;
+  position: relative;
+  top: -2px;
+  padding: 0.5rem;
+}
+
+/* Titles Images */
+/* line 105, ../../sass/creation/custom/_elements.scss */
+.dipta-title-img-node {
+  width: 90%;
+  /*position*/
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  margin: -55px 0 0 0;
+}
+
+/* line 108, ../../sass/creation/custom/_elements.scss */
+.dipta-title-img-navegacio {
+  color: #014b60;
+  /*position*/
+  padding: 10px;
+  position: relative;
+  background-color: #f0f7f9;
+  margin: -70px 0 0 12px;
+}
+
+/* line 114, ../../sass/creation/custom/_elements.scss */
+.field-slideshow-caption {
+  background-color: #ebebeb;
+  padding: 5px;
+}
+
+/*
+*	Images - Creation
+* 
+*/
+/*Slider -home */
+/* line 16, ../../sass/creation/custom/_images.scss */
+.btn-slider-left {
+  display: inline-block;
+  height: 36px;
+  width: 144px;
+  background-image: url("../images/bg-slideshowarrowleft.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 22, ../../sass/creation/custom/_images.scss */
+.btn-slider-left:hover {
+  background-image: url("../images/bg-slideshowarrowlefthover.png");
+}
+
+/* line 23, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth {
+  height: 36px;
+  width: 144px;
+  display: inline-block;
+  background-image: url("../images/bg-slideshowarrowright.png");
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: left;
+  text-indent: -119988px;
+}
+
+/* line 29, ../../sass/creation/custom/_images.scss */
+.btn-slider-rigth:hover {
+  background-image: url("../images/bg-slideshowarrowrighthover.png");
+}
+
+/* line 31, ../../sass/creation/custom/_images.scss */
+.dipta-galeria {
+  background-color: #ccc;
+  width: 677px;
+  height: 112;
+}
+/* line 32, ../../sass/creation/custom/_images.scss */
+.dipta-galeria img {
+  margin: 1.7rem 1rem 0 2rem;
+}
+
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>10px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/* line 26, ../../sass/creation/_creation.scss */
+html {
+  color: #464646;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 52.5%;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 55.5%;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 26, ../../sass/creation/_creation.scss */
+  html {
+    font-size: 58.5%;
+  }
+}
+
+/* line 36, ../../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+
+/*Syntax custom*/
+/* line 46, ../../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 47, ../../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/* line 7, ../../sass/partials/nodes.scss */
+label, .label-inline, .field-label {
+  font-weight: bold;
+}
+
+/* line 8, ../../sass/partials/nodes.scss */
+.label-inline {
+  display: inline;
+}
+
+/*Title pagines views*/
+/* line 12, ../../sass/partials/nodes.scss */
+h1.title, h1#page-title, .dipta-title {
+  color: #014b60;
+}
+
+/*Title nodes*/
+/* line 19, ../../sass/partials/nodes.scss */
+.dipta-title-img-node {
+  color: #014b60;
+}
+
+/* line 20, ../../sass/partials/nodes.scss */
+.dipta-txt-navegacio {
+  border: 0;
+}
+
+/* line 22, ../../sass/partials/nodes.scss */
+blockquote p {
+  font-weight: 500;
+}
+
+/* line 29, ../../sass/partials/nodes.scss */
+.group-concat {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+/* line 32, ../../sass/partials/nodes.scss */
+#contact-site-form, #webform-client-form-3686, #print-mail-form {
+  padding: 2%;
+}
+
+/* line 33, ../../sass/partials/nodes.scss */
+.printmail-label {
+  float: none !important;
+}
+
+/* line 36, ../../sass/partials/nodes.scss */
+.related-content {
+  width: 48%;
+  display: block;
+  margin-top: 5%;
+}
+/* line 39, ../../sass/partials/nodes.scss */
+.related-content h1, .related-content h2, .related-content h3, .related-content h4, .related-content .dipta-subtitol, .related-content #content .field-group-format h2, #content .field-group-format .related-content h2, .related-content .title-camp, .related-content .view-diputats-d-un-partit h3, .view-diputats-d-un-partit .related-content h3, .related-content h5, .related-content #content .dipta-camp div.label-inline, #content .dipta-camp .related-content div.label-inline, .related-content h6, .related-content .field-slideshow-caption {
+  margin: 0;
+  color: #0083a9;
+}
+/* line 40, ../../sass/partials/nodes.scss */
+.related-content ul li {
+  list-style-image: url("../images/ico-link-list.png");
+}
+
+/* line 43, ../../sass/partials/nodes.scss */
+.related-content:last-child {
+  margin-left: 2%;
+}
+
+/* line 45, ../../sass/partials/nodes.scss */
+#cboxCurrent {
+  width: 180px;
+}
+/* line 47, ../../sass/partials/nodes.scss */
+#cboxCurrent a, #cboxCurrent .descarregar {
+  background-image: url("../images/ico-file-download.png");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: center center;
+  padding: 5%;
+}
+
+/* line 53, ../../sass/partials/nodes.scss */
+#content {
+  /*Imatge amb caption ->field-slideshow */
+  /*Title seccio:Agrupacio de camps*/
+  /*dipta fields*/
+  /*imprimir - enviar- pdf*/
+  /*Imatges-> pagina basica - noticia - agenda etc*/
+  /*Imatges-> pagina basica - noticia - agenda etc*/
+  /* Mapa adreces postals*/
+}
+/* line 54, ../../sass/partials/nodes.scss */
+#content .title {
+  padding: 0 2%;
+  margin-top: 15px;
+}
+/* line 55, ../../sass/partials/nodes.scss */
+#content .dipta-subtitol, #content .dipta-title {
+  padding: 0 2%;
+}
+/* line 56, ../../sass/partials/nodes.scss */
+#content blockquote {
+  margin: 2%;
+}
+/* line 57, ../../sass/partials/nodes.scss */
+#content .capcalera img {
+  padding: 0;
+}
+/* line 58, ../../sass/partials/nodes.scss */
+#content .dipta-cos {
+  margin: 2%;
+}
+/* line 60, ../../sass/partials/nodes.scss */
+#content .field-slideshow {
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-bottom: 0px !important;
+}
+/* line 61, ../../sass/partials/nodes.scss */
+#content .dipta-box-quote {
+  margin-bottom: 3rem !important;
+  border-bottom: 0;
+}
+/* line 64, ../../sass/partials/nodes.scss */
+#content .field-group-format h2 {
+  padding: 1rem 0 1rem 0;
+  border-bottom: 0.1rem solid #ebebeb;
+  font-weight: 700;
+  color: #014b60;
+}
+/* line 65, ../../sass/partials/nodes.scss */
+#content .group-dades-generals, #content .group-dades-contacte {
+  margin: 0 1.4rem 0 1.4rem;
+}
+/* line 66, ../../sass/partials/nodes.scss */
+#content .group-dades-serveis, #content .dipta-info-serveis {
+  margin: 0 1.4rem 0 1.4rem;
+}
+/* line 69, ../../sass/partials/nodes.scss */
+#content .dipta-camp div.label-inline {
+  font-weight: 700;
+}
+/* line 70, ../../sass/partials/nodes.scss */
+#content .dipta-camp span {
+  padding-left: 0.5rem;
+}
+/* line 72, ../../sass/partials/nodes.scss */
+#content .dipta-camp .dipta-postal {
+  width: 39%;
+}
+/* line 74, ../../sass/partials/nodes.scss */
+#content .dipta-camp .dipta-postal .state, #content .dipta-camp .dipta-postal .street-block, #content .dipta-camp .dipta-postal .locality-block, #content .dipta-camp .dipta-postal .name-block {
+  display: block!important;
+  line-height: 13px;
+}
+/* line 75, ../../sass/partials/nodes.scss */
+#content .dipta-camp .dipta-postal .addressfield-container-inline:before {
+  content: none!important;
+  display: block !important;
+}
+/* line 76, ../../sass/partials/nodes.scss */
+#content .dipta-camp .dipta-postal .addressfield-container-inline span {
+  padding-left: 0!important;
+}
+/* line 77, ../../sass/partials/nodes.scss */
+#content .dipta-camp .dipta-postal .country {
+  display: none !important;
+}
+/* line 81, ../../sass/partials/nodes.scss */
+#content .links {
+  display: block !important;
+  text-align: right;
+  background-color: #F0F7F9;
+  clear: both;
+  font-size: 10px;
+  padding: 0;
+  margin: 0 2% 0 2%;
+}
+/* line 82, ../../sass/partials/nodes.scss */
+#content .links li {
+  margin: 0px;
+}
+/* line 85, ../../sass/partials/nodes.scss */
+#content .dipta-no-float {
+  padding: 2%;
+  clear: both;
+  /*Descarregar imatge original*/
+}
+/* line 87, ../../sass/partials/nodes.scss */
+#content .dipta-no-float img {
+  float: none;
+}
+/* line 88, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .field-slideshow {
+  overflow-x: visible;
+  overflow-y: visible;
+  outline: 1px solid #ebebeb;
+}
+/* line 88, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .field-slideshow img {
+  display: block;
+}
+/* line 89, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .field-slideshow-pager {
+  text-align: center;
+}
+/* line 91, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .field-slideshow-pager a {
+  font-size: 3px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  background-color: #ccc;
+  color: transparent;
+  padding: 1px 3px 1px 3px;
+  margin: 1px;
+  width: 100%;
+}
+/* line 92, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .field-slideshow-pager a.activeSlide {
+  background-color: #555;
+}
+/* line 95, ../../sass/partials/nodes.scss */
+#content .dipta-no-float .original {
+  display: block;
+  float: right;
+  background-image: url("../../images/ico-file-download.png");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: center center;
+  padding: 0 2% 20px 2%;
+}
+/* line 102, ../../sass/partials/nodes.scss */
+#content .dipta-float {
+  width: 300px;
+  float: left;
+  margin: 3% 2% 0 2%;
+  /*Descarregar imatge original*/
+}
+/* line 105, ../../sass/partials/nodes.scss */
+#content .dipta-float .activeSlide {
+  background-color: #555;
+}
+/* line 106, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow {
+  overflow-x: visible;
+  overflow-y: visible;
+  outline: 1px solid #ebebeb;
+}
+/* line 106, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow img {
+  display: block;
+}
+/* line 107, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow-wrapper {
+  width: 300px!important;
+}
+/* line 109, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow-wrapper .field-slideshow-pager {
+  text-align: center;
+}
+/* line 111, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow-wrapper .field-slideshow-pager a {
+  font-size: 3px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  background-color: #ccc;
+  color: transparent;
+  padding: 1px 3px 1px 3px;
+  margin: 1px;
+  width: 100%;
+}
+/* line 112, ../../sass/partials/nodes.scss */
+#content .dipta-float .field-slideshow-wrapper .field-slideshow-pager a.activeSlide {
+  background-color: #555;
+}
+/* line 116, ../../sass/partials/nodes.scss */
+#content .dipta-float .original {
+  display: block;
+  float: right;
+  background-image: url("../../images/ico-file-download.png");
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: center center;
+  padding: 0 3% 20px 3%;
+}
+/* line 122, ../../sass/partials/nodes.scss */
+#content .dipta-mapa {
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: 45%;
+  width: 356px;
+}
+/* line 123, ../../sass/partials/nodes.scss */
+#content .dipta-mapa .openlayers-map-map_adreca_municipi, #content .dipta-mapa .openlayers-container-map-map_adreca_consell {
+  border: 0px solid #cccccc;
+}
+
+/* line 131, ../../sass/partials/nodes.scss */
+.node-dipta-acte .group-dades-acte {
+  margin: 2%;
+}
+/* line 131, ../../sass/partials/nodes.scss */
+.node-dipta-acte .group-dades-acte .group_da_acte {
+  width: 45%;
+  position: absolute;
+}
+/* line 132, ../../sass/partials/nodes.scss */
+.node-dipta-acte .group_roda_acte {
+  margin: 2%;
+}
+
+/* line 137, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .links, .node-dipta-comarques .links {
+  margin-top: 20px !important;
+}
+/* line 138, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .group-dades-municipi, .node-dipta-municipis .group-dades-comarca, .node-dipta-comarques .group-dades-municipi, .node-dipta-comarques .group-dades-comarca {
+  margin: 2%;
+}
+/* line 138, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .group-dades-municipi .dipta-camp, .node-dipta-municipis .group-dades-comarca .dipta-camp, .node-dipta-comarques .group-dades-municipi .dipta-camp, .node-dipta-comarques .group-dades-comarca .dipta-camp {
+  display: inline-block;
+  margin-right: 2%;
+}
+/* line 138, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .group-dades-municipi h2, .node-dipta-municipis .group-dades-comarca h2, .node-dipta-comarques .group-dades-municipi h2, .node-dipta-comarques .group-dades-comarca h2 {
+  margin-top: 0;
+}
+/* line 139, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .group-ajuntament-presen, .node-dipta-municipis .group-dades-consell, .node-dipta-comarques .group-ajuntament-presen, .node-dipta-comarques .group-dades-consell {
+  margin: 2%;
+}
+/* line 139, ../../sass/partials/nodes.scss */
+.node-dipta-municipis .group-ajuntament-presen .group-consell, .node-dipta-municipis .group-ajuntament-presen .group-ajuntament, .node-dipta-municipis .group-dades-consell .group-consell, .node-dipta-municipis .group-dades-consell .group-ajuntament, .node-dipta-comarques .group-ajuntament-presen .group-consell, .node-dipta-comarques .group-ajuntament-presen .group-ajuntament, .node-dipta-comarques .group-dades-consell .group-consell, .node-dipta-comarques .group-dades-consell .group-ajuntament {
+  width: 45%;
+  position: absolute;
+}
+
+/* line 148, ../../sass/partials/nodes.scss */
+.seccions-destacades {
+  margin: 4% 1rem 0 1rem;
+  background-color: #f0f7f9;
+}
+/* line 150, ../../sass/partials/nodes.scss */
+.seccions-destacades h2 {
+  color: #0083a9;
+  border-bottom: 0.4rem solid white;
+}
+/* line 151, ../../sass/partials/nodes.scss */
+.seccions-destacades .destacat-content {
+  padding: 2rem;
+}
+/* line 151, ../../sass/partials/nodes.scss */
+.seccions-destacades .destacat-content h3 {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+/* line 152, ../../sass/partials/nodes.scss */
+.seccions-destacades .dipta-columns {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3;
+  display: block;
+  -webkit-column-rule: 4px solid white;
+  -moz-column-rule: 4px solid white;
+  -ms-column-rule: 4px solid white;
+  -o-column-rule: 4px solid white;
+  column-rule: 4px solid white;
+}
+
+/* line 156, ../../sass/partials/nodes.scss */
+.group-documents-obra, .group-dades-obra {
+  margin: 1.4rem;
+}
+
+/* line 157, ../../sass/partials/nodes.scss */
+.grid-obra {
+  width: 45%;
+  border-bottom: 1px solid #ebebeb;
+  padding: 2%;
+}
+/* line 157, ../../sass/partials/nodes.scss */
+.grid-obra h3, .grid-obra h2 {
+  margin: 1px;
+}
+
+/* line 158, ../../sass/partials/nodes.scss */
+.grid-obra-licitacio {
+  border-bottom: 1px solid #ebebeb;
+  padding: 2% 1% 2% 1%;
+}
+/* line 158, ../../sass/partials/nodes.scss */
+.grid-obra-licitacio h3, .grid-obra-licitacio h2 {
+  margin: 1px;
+}
+
+/* line 159, ../../sass/partials/nodes.scss */
+.clear-float {
+  clear: both;
+}
+
+/* line 161, ../../sass/partials/nodes.scss */
+.view-display-id-block_1 .concatenats, .view-display-id-block_3 .concatenats {
+  padding: 0!important;
+}
+/* line 161, ../../sass/partials/nodes.scss */
+.view-display-id-block_1 .concatenats span, .view-display-id-block_3 .concatenats span {
+  padding: 0;
+  border-left: 0px solid white;
+}
+/* line 162, ../../sass/partials/nodes.scss */
+.view-display-id-block_1 .municipi, .view-display-id-block_3 .municipi {
+  margin-left: 5px;
+  padding-left: 5px !important;
+  border-left: 1px solid #cccccc !important;
+}
+
+/* line 168, ../../sass/partials/nodes.scss */
+.group-interes-diputat {
+  padding: 2% !important;
+}
+
+/* line 169, ../../sass/partials/nodes.scss */
+.title-camp, .view-diputats-d-un-partit h3 {
+  padding: 1rem 0 1rem 0;
+  border-bottom: 0.1rem solid #ebebeb;
+  font-weight: 700;
+  color: #014b60;
+}
+
+/* line 171, ../../sass/partials/nodes.scss */
+.image-diputat {
+  float: left;
+  width: 30%;
+}
+
+/* line 173, ../../sass/partials/nodes.scss */
+.view-diputats-d-un-partit .views-field-title {
+  width: 23%px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* line 174, ../../sass/partials/nodes.scss */
+.view-diputats-d-un-partit h3 {
+  clear: both;
+  padding: 2%;
+}
+
+/* line 177, ../../sass/partials/nodes.scss */
+.grid-diputat {
+  width: 23%;
+  padding: 1%;
+  float: left;
+}
+
+/* line 182, ../../sass/partials/nodes.scss */
+div.container_formacio div.label-inline {
+  margin: 0.5em 0;
+  float: left;
+  display: block;
+}
+/* line 183, ../../sass/partials/nodes.scss */
+div.container_formacio span {
+  margin: 0.5em 0;
+  padding: 0;
+  display: block;
+}
+
+/* line 190, ../../sass/partials/nodes.scss */
+div.container_publicacio {
+  margin-bottom: 2em;
+}
+/* line 192, ../../sass/partials/nodes.scss */
+div.container_publicacio img {
+  float: left;
+  display: block;
+  margin: 0.5em 2em 1em 0.2em;
+}
+/* line 193, ../../sass/partials/nodes.scss */
+div.container_publicacio div.data_pub, div.container_publicacio h2 {
+  margin: 0;
+  padding: 0;
+}
+/* line 194, ../../sass/partials/nodes.scss */
+div.container_publicacio span.file {
+  display: inline-block;
+}
+
+/* ALtres*/
+/* line 202, ../../sass/partials/nodes.scss */
+.node-unpublished {
+  /* Unpublished nodes */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 205, ../../sass/partials/nodes.scss */
+.node-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  /*@include unpublished-div;*/
+}
+
+/* line 210, ../../sass/partials/nodes.scss */
+.pepinillo_trans {
+  left: 20px;
+  position: absolute;
+  top: 0;
+  padding: 0 20px;
+}
+/* line 218, ../../sass/partials/nodes.scss */
+.pepinillo_trans h1 {
+  color: #0083a9;
+  background-color: rgba(255, 255, 255, 0.9);
+  line-height: 15px;
+  font-size: 18px;
+  margin: 0;
+  top: 10px;
+}
+/* line 226, ../../sass/partials/nodes.scss */
+.pepinillo_trans h2.subtitol {
+  color: #0083a9;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+/* line 233, ../../sass/partials/nodes.scss */
+.pepinillo_trans .field-name-body {
+  /*@include adjust-font-size-to(14px);*/
+  padding-bottom: 15px;
+  padding-top: 15px;
+  top: 102px;
+}
+/* line 238, ../../sass/partials/nodes.scss */
+.pepinillo_trans .field-name-body p {
+  margin: 0;
+}

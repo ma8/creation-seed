@@ -1,0 +1,178 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:400,300,700,400italic,100);
+/**
+ * @file
+ * Form Styling
+ */
+/* line 9, ../../sass/partials/forms.scss */
+.form-item {
+  /* Wrapper for a form element (or group of form elements) and its label */
+  margin: 1.5em 0;
+}
+/* line 14, ../../sass/partials/forms.scss */
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  /* Highlight the form elements that caused a form submission error */
+  border: 1px solid #cc0000;
+}
+/* line 18, ../../sass/partials/forms.scss */
+.form-item label {
+  /* The label for a form element */
+  display: block;
+  font-weight: bold;
+}
+/* line 23, ../../sass/partials/forms.scss */
+.form-item label.option {
+  /* The label for a radio button or checkbox */
+  display: inline;
+  font-weight: normal;
+}
+/* line 28, ../../sass/partials/forms.scss */
+.form-item .form-required {
+  /* The part of the label that indicates a required field */
+  color: #c00;
+}
+/* line 32, ../../sass/partials/forms.scss */
+.form-item .description {
+  /* The descriptive help text (separate from the label) */
+  font-size: 0.85em;
+}
+/* line 37, ../../sass/partials/forms.scss */
+.form-checkboxes .form-item, .form-radios .form-item {
+  /* Pack groups of checkboxes and radio buttons closer together */
+  margin: 0;
+  /* Drupal core uses "0.4em 0" */
+}
+
+/* line 44, ../../sass/partials/forms.scss */
+.container-inline div,
+.container-inline label {
+  /* Inline labels and form divs */
+  display: inline;
+}
+
+/* line 49, ../../sass/partials/forms.scss */
+a.button {
+  /* Buttons used by contrib modules like Media */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+/* line 58, ../../sass/partials/forms.scss */
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+/* line 66, ../../sass/partials/forms.scss */
+#block-search-form {
+  /* Wrapper for the search form */
+  text-align: right;
+}
+/* line 68, ../../sass/partials/forms.scss */
+#block-search-form input {
+  font-size: 0.9em;
+}
+/* line 71, ../../sass/partials/forms.scss */
+#block-search-form .form-text {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #d8dcdf;
+  padding: 1px 0px 1px 0px;
+  background: white url("../../images/ico-search.png") no-repeat 95% center;
+}
+/* line 78, ../../sass/partials/forms.scss */
+#block-search-form .form-actions {
+  display: none;
+}
+
+/*
+ * Drupal's default login form block
+ */
+/* line 87, ../../sass/partials/forms.scss */
+#user-login-form {
+  text-align: left;
+  /* LTR */
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+}
+/* line 97, ../../sass/partials/forms.scss */
+#user-login-form ul {
+  /* OpenID creates a new ul above the login form's links. */
+  margin-bottom: 0;
+  /* Position OpenID's ul next to the rest of the links. */
+}
+/* line 102, ../../sass/partials/forms.scss */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* The "Log in using OpenID" link. */
+  margin-top: 1.5em;
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */
+}
+/* line 107, ../../sass/partials/forms.scss */
+#user-login-form li.user-link {
+  /* The "Cancel OpenID login" link. */
+  margin-top: 1.5em;
+}
+
+/* line 112, ../../sass/partials/forms.scss */
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in normalize.css, but restore them for the admin
+ * section of the site.
+ */
+/* line 124, ../../sass/partials/forms.scss */
+form th {
+  text-align: left;
+  /* LTR */
+  padding-right: 1em;
+  /* LTR */
+  border-bottom: 3px solid #cccccc;
+}
+/* line 130, ../../sass/partials/forms.scss */
+form tbody {
+  border-top: 1px solid #cccccc;
+}
+/* line 134, ../../sass/partials/forms.scss */
+form tr.even {
+  background-color: #fff;
+}
+/* line 138, ../../sass/partials/forms.scss */
+form table .item-list ul {
+  margin: 0;
+}
+
+/* line 147, ../../sass/partials/forms.scss */
+.lt-ie8 tr.even th,
+.lt-ie8 tr.even td,
+.lt-ie8 tr.odd th,
+.lt-ie8 tr.odd td {
+  border-bottom: 1px solid #cccccc;
+  /* IE doesn't display borders on table rows */
+}
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+/* line 157, ../../sass/partials/forms.scss */
+td.menu-disabled {
+  background: #ccc;
+}

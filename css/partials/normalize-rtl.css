@@ -1,0 +1,44 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:400,300,700,400italic,100);
+/* normalize-rtl.css - RTL language extension of normalize.scss. */
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 14, ../../sass/partials/normalize-rtl.scss */
+dd {
+  margin: 0 25px 0 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 25, ../../sass/partials/normalize-rtl.scss */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 25px 0 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 37, ../../sass/partials/normalize-rtl.scss */
+legend {
+  *margin-left: 0;
+  *margin-right: -7px;
+  /* 3 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/* line 48, ../../sass/partials/normalize-rtl.scss */
+th {
+  text-align: right;
+}

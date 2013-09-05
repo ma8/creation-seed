@@ -1,0 +1,62 @@
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+
+@import "susy";  
+
+/* Visual Grid Susy for REM 1rem=>16px*/
+$total-columns: 12;             // a 12-column grid
+$column-width: 6rem;            // each column is 4em wide
+$gutter-width: 2rem;            // 1em gutters between columns
+$grid-padding: $gutter-width;  // grid-padding equal to gutters
+
+$verd:#3DE0A1;
+$grid-background-column-color:lighten($verd, 10%); 
+$grid-background-gutter-color:#fff;
+
+$border-box-sizing : false;
+
+$iphone4: 4 320px; 
+$iphone4-landscape:321px 5 480px; 
+$iphone5-landscape:481px 6 568px;
+$kindle:569px 8 767px;
+$ipad:768px 11 939px ;
+$ipad-landscape:940px 12  ;
+
+
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+
+/*Mixins*/
+@mixin creation-container-width{
+	@include at-breakpoint($iphone4) { @include set-container-width; }
+	@include at-breakpoint($iphone4-landscape) { @include set-container-width; }
+	@include at-breakpoint($iphone5-landscape) { @include set-container-width; }
+	@include at-breakpoint($kindle) { @include set-container-width; }
+	@include at-breakpoint($ipad) { @include set-container-width; }
+	@include at-breakpoint($ipad-landscape) { @include set-container-width; }
+}
+
+@mixin creation-container-show{
+	@include susy-grid-background;
+	@include at-breakpoint($iphone4) { @include set-container-width; @include susy-grid-background; }
+	@include at-breakpoint($iphone4-landscape) { @include set-container-width; @include susy-grid-background; }
+	@include at-breakpoint($iphone5-landscape) { @include set-container-width; @include susy-grid-background; }
+	@include at-breakpoint($kindle) { @include set-container-width; @include susy-grid-background; }
+	@include at-breakpoint($ipad) { @include set-container-width; @include susy-grid-background; }
+	@include at-breakpoint($ipad-landscape) { @include set-container-width; @include susy-grid-background; }
+	/*a {color:$base01 !important;}*/
+}
+
+@mixin creation-grid-color-change{
+	@include at-breakpoint($iphone4) { background-color:lighten($verd, 10%); }
+	@include at-breakpoint($iphone4-landscape) { background-color:darken($verd, 40%);}
+	@include at-breakpoint($iphone5-landscape) { background-color:saturate($verd, 10%);}
+	@include at-breakpoint($kindle) { background-color:desaturate($verd, 50%); }
+	@include at-breakpoint($ipad) { background-color:$verd; }
+	@include at-breakpoint($ipad-landscape) { background-color:invert($verd);}
+}

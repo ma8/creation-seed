@@ -1,0 +1,695 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900,500,100,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(http://fonts.googleapis.com/css?family=Sintony:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+/**
+ * @file
+ * Page Styling
+ *
+ */
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*	http://www.colourlovers.com/palette/147921/Blue_Kitten
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+
+*/
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Calculator Golden Ratio http://www.pearsonified.com/typography/
+*	http://modularscale.com/ + http://gridwax.gs/ + https://typekit.com/
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Especial*/
+/* Especial*/
+/* Especial*/
+/* Base font */
+/*15px*/
+/*25px*/
+/*golden*/
+/*margin:$base-h 0;*/
+/*16px*ratio^4*/
+/*
+$h1-s:2  * $base-s;
+$h1-h: 1.4 * $base-h;
+$h2-s:1.8 * $base-s;
+$h2-h: 1.3 * $base-h;
+$h3-s:1.5 * $base-s;
+$h3-h: 1.1 * $base-h;
+$h4-s:1.0 * $base-s;
+$h4-h: 0.7 * $base-h;
+$h5-s:0.83 * $base-s;
+$h5-h: 0.6 * $base-h;
+$h6-s:0.75 * $base-s;
+$h6-h: 0.55 * $base-h;
+*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Calculator Golden Ratio http://www.pearsonified.com/typography/
+*	http://modularscale.com/ + http://gridwax.gs/ + https://typekit.com/
+*/
+/* line 9, ../../sass/creation/custom/_typography.scss */
+p {
+  font-weight: 300;
+  margin: 2.5rem 0;
+}
+
+/* line 10, ../../sass/creation/custom/_typography.scss */
+a {
+  color: #fd6e8a;
+  text-decoration: none;
+}
+
+/* line 11, ../../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 12, ../../sass/creation/custom/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings*/
+/* line 15, ../../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 10.96564rem;
+  font-weight: 700;
+  line-height: 10.96564rem;
+  letter-spacing: -0.61117rem;
+  margin: 10.96564rem 0;
+}
+
+/* line 16, ../../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 6.77728rem;
+  font-weight: 700;
+  line-height: 6.77728rem;
+  letter-spacing: -0.37773rem;
+  margin: 6.77728rem 0;
+}
+
+/* line 17, ../../sass/creation/custom/_typography.scss */
+h3 {
+  font-size: 4.18868rem;
+  font-weight: 700;
+  line-height: 4.18868rem;
+  letter-spacing: -0.14429rem;
+  margin: 4.18868rem 0;
+}
+
+/* line 18, ../../sass/creation/custom/_typography.scss */
+h4 {
+  font-size: 2.5888rem;
+  font-weight: 700;
+  line-height: 2.5888rem;
+  letter-spacing: -0.02rem;
+  margin: 2.5888rem 0;
+}
+
+/* line 19, ../../sass/creation/custom/_typography.scss */
+h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: -0.02rem;
+  margin: 1.6rem 0;
+}
+
+/* line 20, ../../sass/creation/custom/_typography.scss */
+h6 {
+  font-size: 0.98888rem;
+  font-weight: 700;
+  line-height: 0.98888rem;
+  letter-spacing: -0.02rem;
+  margin: 0.98888rem 0;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 28, ../../sass/creation/custom/_typography.scss */
+.creation-resum p {
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.92rem;
+  letter-spacing: 0;
+}
+
+/* Blockquotes*/
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../../sass/creation/custom/_elements.scss */
+.creation-clear, .creation-resum:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* Element creation-resum */
+/* line 17, ../../sass/creation/custom/_elements.scss */
+.creation-resum h1, .creation-resum h2, .creation-resum h3, .creation-resum h4, .creation-resum h5 {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 18, ../../sass/creation/custom/_elements.scss */
+.creation-resum p {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 19, ../../sass/creation/custom/_elements.scss */
+.creation-resum p:after {
+  content: " ...";
+  font-weight: 600;
+  color: #fd6e8a;
+  font-size: 3rem;
+}
+/* line 20, ../../sass/creation/custom/_elements.scss */
+.creation-resum .creation-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 21, ../../sass/creation/custom/_elements.scss */
+.creation-resum img {
+  margin-bottom: 5px;
+}
+
+/* Element Conacatenats*/
+/* Titles Images */
+/*
+*	Images - Creation
+* 
+*/
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>16px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/*Mixins*/
+/* line 26, ../../sass/creation/_creation.scss */
+html {
+  color: #848d82;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+  /*@include at-breakpoint($iphone4) { font-size:52.5%;}
+   @include at-breakpoint($iphone4-landscape) { font-size:55.5%; }
+   @include at-breakpoint($iphone5-landscape) { font-size:58.5%; } */
+}
+
+/* line 36, ../../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 36, ../../sass/creation/_creation.scss */
+  body {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 36, ../../sass/creation/_creation.scss */
+  body {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+    margin: 2.1rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 36, ../../sass/creation/_creation.scss */
+  body {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+    margin: 2.1rem 0;
+  }
+}
+
+/*Syntax custom*/
+/* line 52, ../../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 53, ../../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/*Typography responsive*/
+/* line 57, ../../sass/creation/_creation.scss */
+h1 {
+  /*H1 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 57, ../../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 57, ../../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 57, ../../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+
+/* line 64, ../../sass/creation/_creation.scss */
+h2 {
+  /*H2 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 64, ../../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 64, ../../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 64, ../../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+
+/* line 71, ../../sass/creation/_creation.scss */
+h3 {
+  /*H3 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 71, ../../sass/creation/_creation.scss */
+  h3 {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 71, ../../sass/creation/_creation.scss */
+  h3 {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 71, ../../sass/creation/_creation.scss */
+  h3 {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+
+/* line 78, ../../sass/creation/_creation.scss */
+h5 {
+  /*H4 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 78, ../../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 78, ../../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 78, ../../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+
+/* line 85, ../../sass/creation/_creation.scss */
+h6 {
+  /*H4 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 85, ../../sass/creation/_creation.scss */
+  h6 {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 85, ../../sass/creation/_creation.scss */
+  h6 {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 85, ../../sass/creation/_creation.scss */
+  h6 {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}

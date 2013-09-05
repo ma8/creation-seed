@@ -1,0 +1,24 @@
+/*
+*
+*	Header
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+
+/*Mixins*/
+
+/* Responsive */
+.header-content { //@include creation-grid-color-change;
+	@include container; @include creation-container-width; padding-top: 1px; 
+	/*Elements*/
+		
+ 		 @include at-breakpoint($iphone4) { }	
+ 		 @include at-breakpoint($iphone4-landscape) {  }
+ 		 @include at-breakpoint($iphone5-landscape) { }
+		 @include at-breakpoint($kindle) { }
+		 @include at-breakpoint($ipad) { }
+		 @include at-breakpoint($ipad-landscape) {   }
+
+}
+
+.header-content:hover{  /*@include creation-grid-show;*/}

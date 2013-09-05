@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:400,300,700,400italic,100);
+/**
+ * @file
+ * Field Styling
+ *
+ * The Fences module allows site builders to pick the semeantic HTML5 element
+ * for each field while editing the field's settings. There's no way a theme
+ * can ever know which element to use for the fields on your site, so Zen
+ * just uses lets Drupal core or Fences decide. Since you DO NOT want 3 wrapping
+ * divs around every field (do you?), we highly recommend Fences.
+ *
+ * http://drupal.org/project/fences
+ */
+/*
+ * Named fields
+ */
+/*
+.field-name-field-destacat-1 {
+  margin-top: 30px;
+  .field-name-field-pertany-area { // FIXME
+    border-top: 4px solid $link-color;
+    border-bottom: 2px solid #ebebeb;
+    padding: 8px 0;
+    color: $link-color;
+    font-family: $open-sans-regular;
+    @include adjust-font-size-to(18px);
+  }
+  .field-name-title {
+    h2 {
+      margin: 0;
+      @include adjust-font-size-to(16px);
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .node {
+    border-bottom: 2px solid #ebebeb;
+    padding: 15px 0;
+  }
+}
+
+.field-name-field-imatges-galeria {
+  margin-bottom: 30px;
+  background: #ebebeb;
+  .label-above {
+    border-bottom: 1px solid #fff;
+    padding-left: 20px;
+    font-family: $open-sans-regular;
+    @include adjust-font-size-to(18px);
+  }
+}
+
+.field-name-field-dipta-basica-text-destacat {
+  margin-bottom: 1em;
+  @include adjust-font-size-to(14px);
+}
+
+.field-name-field-dipta-hab-muni, .field-name-field-dipta-exte-muni{
+	display:inline-block;
+}
+.field-name-field-dipta-exte-muni{
+	border-left: 1px solid #ebebeb;
+    padding-left: 10px;
+	margin-left:10px;
+}
+.label-inline,.street-block,.addressfield-container-inline{
+		display:inline-block;
+	}
+.addressfield-container-inline::before{
+		content: "\00B7 ";
+		padding:0 5px 0 5px;
+		float: left;		
+	}
+.country{
+	visibility:hidden;
+}
+/* Maquetacio fitxa Noticies.
+* font-family: 'Roboto Condensed', sans-serif;
+*/
+/* fi fitxa noticia*/
+/****    */

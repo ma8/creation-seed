@@ -1,0 +1,1610 @@
+@charset "CP850";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900,500,100,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,800);
+@import url(http://fonts.googleapis.com/css?family=Denk+One);
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url(http://fonts.googleapis.com/css?family=Sintony:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+/*
+* Front-end  framework Creation Seed for Compass
+*/
+/**
+ * @file
+ * Creation for compass - Front-end framework de  la Diputaci¢ de Tarragona.
+ * @Miguel µngel Ramos. 
+ *
+ */
+/* Compass*/
+/* Creation base */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+/* line 8, ../sass/creation/base/_syntax.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, "Andale Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* line 27, ../sass/creation/base/_syntax.scss */
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+/* line 32, ../sass/creation/base/_syntax.scss */
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  /* line 39, ../sass/creation/base/_syntax.scss */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+/* Code blocks */
+/* line 45, ../sass/creation/base/_syntax.scss */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+
+/* line 52, ../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  /* #FEFA83  #f5f2f0 #FFFBEA #FEFA83;*/
+  background: #FEFA83;
+  border: 1px solid #d2caa7;
+}
+
+/* Inline code */
+/* line 63, ../sass/creation/base/_syntax.scss */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+/* line 71, ../sass/creation/base/_syntax.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+/* line 75, ../sass/creation/base/_syntax.scss */
+.token.punctuation {
+  color: #999;
+}
+
+/* line 79, ../sass/creation/base/_syntax.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 86, ../sass/creation/base/_syntax.scss */
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+/* line 92, ../sass/creation/base/_syntax.scss */
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+/* line 100, ../sass/creation/base/_syntax.scss */
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 107, ../sass/creation/base/_syntax.scss */
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+/* line 113, ../sass/creation/base/_syntax.scss */
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+/* line 117, ../sass/creation/base/_syntax.scss */
+.token.important {
+  font-weight: bold;
+}
+
+/* line 121, ../sass/creation/base/_syntax.scss */
+.token.entity {
+  cursor: help;
+}
+
+/* line 124, ../sass/creation/base/_syntax.scss */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+/* line 129, ../sass/creation/base/_syntax.scss */
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prisms padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* line 149, ../sass/creation/base/_syntax.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+/* line 166, ../sass/creation/base/_syntax.scss */
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+/* line 171, ../sass/creation/base/_syntax.scss */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+/* line 177, ../sass/creation/base/_syntax.scss */
+pre.line-numbers > code {
+  position: relative;
+}
+
+/* line 181, ../sass/creation/base/_syntax.scss */
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 198, ../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+/* line 204, ../sass/creation/base/_syntax.scss */
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/**
+* 	Palette colors
+*	http://www.colourlovers.com/palette/147921/Blue_Kitten
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+
+*/
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* Tonalitats */
+/**
+*	Typografia  web-fonts
+* 	http://www.google.com/fonts
+*	Calculator Golden Ratio http://www.pearsonified.com/typography/
+*	http://modularscale.com/ + http://gridwax.gs/ + https://typekit.com/
+*/
+/* Imports */
+/* Variables */
+/*Contingut*/
+/*Headings*/
+/* Especial*/
+/* Especial*/
+/* Especial*/
+/* Especial*/
+/* Base font */
+/*15px*/
+/*25px*/
+/*golden*/
+/*margin:$base-h 0;*/
+/*16px*ratio^4*/
+/*
+$h1-s:2  * $base-s;
+$h1-h: 1.4 * $base-h;
+$h2-s:1.8 * $base-s;
+$h2-h: 1.3 * $base-h;
+$h3-s:1.5 * $base-s;
+$h3-h: 1.1 * $base-h;
+$h4-s:1.0 * $base-s;
+$h4-h: 0.7 * $base-h;
+$h5-s:0.83 * $base-s;
+$h5-h: 0.6 * $base-h;
+$h6-s:0.75 * $base-s;
+$h6-h: 0.55 * $base-h;
+*/
+/* Creation custom*/
+/**
+*	Typografia  - Creation
+* 	http://www.google.com/fonts
+*	Calculator Golden Ratio http://www.pearsonified.com/typography/
+*	http://modularscale.com/ + http://gridwax.gs/ + https://typekit.com/
+*/
+/* line 9, ../sass/creation/custom/_typography.scss */
+p {
+  font-weight: 300;
+  margin: 2.5rem 0;
+}
+
+/* line 10, ../sass/creation/custom/_typography.scss */
+a {
+  color: #fd6e8a;
+  text-decoration: none;
+}
+
+/* line 11, ../sass/creation/custom/_typography.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 12, ../sass/creation/custom/_typography.scss */
+h1, h2, h3, h2.title-doc, h4, h5, h6, #s2 .creation-caption {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings*/
+/* line 15, ../sass/creation/custom/_typography.scss */
+h1 {
+  /*body*/
+  font-size: 10.96564rem;
+  font-weight: 700;
+  line-height: 10.96564rem;
+  letter-spacing: -0.61117rem;
+  margin: 10.96564rem 0;
+}
+
+/* line 16, ../sass/creation/custom/_typography.scss */
+h2 {
+  font-size: 6.77728rem;
+  font-weight: 700;
+  line-height: 6.77728rem;
+  letter-spacing: -0.37773rem;
+  margin: 6.77728rem 0;
+}
+
+/* line 17, ../sass/creation/custom/_typography.scss */
+h3, h2.title-doc {
+  font-size: 4.18868rem;
+  font-weight: 700;
+  line-height: 4.18868rem;
+  letter-spacing: -0.14429rem;
+  margin: 4.18868rem 0;
+}
+
+/* line 18, ../sass/creation/custom/_typography.scss */
+h4 {
+  font-size: 2.5888rem;
+  font-weight: 700;
+  line-height: 2.5888rem;
+  letter-spacing: -0.02rem;
+  margin: 2.5888rem 0;
+}
+
+/* line 19, ../sass/creation/custom/_typography.scss */
+h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+  letter-spacing: -0.02rem;
+  margin: 1.6rem 0;
+}
+
+/* line 20, ../sass/creation/custom/_typography.scss */
+h6, #s2 .creation-caption {
+  font-size: 0.98888rem;
+  font-weight: 700;
+  line-height: 0.98888rem;
+  letter-spacing: -0.02rem;
+  margin: 0.98888rem 0;
+}
+
+/* Paragraph size h1,h2,h3,h4,h5.h6*/
+/* line 28, ../sass/creation/custom/_typography.scss */
+.creation-resum p, #s2 .creation-concatenats {
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.92rem;
+  letter-spacing: 0;
+}
+
+/* Blockquotes*/
+/*
+*	Elements - Creation
+*	
+*/
+/* Element Clear */
+/* line 8, ../sass/creation/custom/_elements.scss */
+.creation-clear, .creation-resum:after, #s2 .creation-body:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* Element box*/
+/* Element creation-resum */
+/* line 17, ../sass/creation/custom/_elements.scss */
+.creation-resum h1, .creation-resum h2, .creation-resum h3, .creation-resum h2.title-doc, .creation-resum h4, .creation-resum h5 {
+  margin: 5px 0 5px 0;
+  font-weight: 600;
+}
+/* line 18, ../sass/creation/custom/_elements.scss */
+.creation-resum p {
+  margin: 5px 0 5px 0;
+  padding: 0;
+}
+/* line 19, ../sass/creation/custom/_elements.scss */
+.creation-resum p:after {
+  content: " ...";
+  font-weight: 600;
+  color: #fd6e8a;
+  font-size: 3rem;
+}
+/* line 20, ../sass/creation/custom/_elements.scss */
+.creation-resum .creation-resum-float {
+  float: left;
+  margin: 5px 5px 0 0;
+}
+/* line 21, ../sass/creation/custom/_elements.scss */
+.creation-resum img {
+  margin-bottom: 5px;
+}
+
+/* Element Conacatenats*/
+/* line 41, ../sass/creation/custom/_elements.scss */
+#s2 .creation-concatenats {
+  /* separador "|"*/
+}
+/* line 42, ../sass/creation/custom/_elements.scss */
+#s2 .creation-concatenats .creation-camp {
+  display: inline-block;
+}
+/* line 42, ../sass/creation/custom/_elements.scss */
+#s2 .creation-concatenats .creation-camp span + span {
+  padding-left: 0.5rem;
+}
+/* line 47, ../sass/creation/custom/_elements.scss */
+#s2 .creation-concatenats div + div:before {
+  content: "|";
+  font-size: 0.8rem;
+  position: relative;
+  top: -2px;
+  padding: 0.5rem;
+}
+
+/* Titles Images */
+/* line 66, ../sass/creation/custom/_elements.scss */
+#s2 .creation-img-float {
+  float: left;
+  margin: 0 2rem 2rem 0;
+  outline: 1px solid #ebebeb;
+}
+
+/* line 68, ../sass/creation/custom/_elements.scss */
+#s2 .creation-caption {
+  background-color: #ebebeb;
+  padding: 5px;
+}
+
+/*
+*	Images - Creation
+* 
+*/
+/*
+*	Navigations- Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Tables - Creation
+*	Menus + breadcrums 
+*
+*/
+/*
+*	Forms - Creation
+*	Menus + breadcrums + box navigations
+*
+*/
+/*Creation layouts*/
+/*
+*
+*	Susy - Creation base
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+/* Visual Grid Susy for REM 1rem=>16px*/
+/*
+lighten($verd, 20%);darken($verd, 20%);saturate($verd, 10%);desaturate($verd, 10%);grayscale($verd);invert($verd);
+*/
+/*Mixins*/
+/* line 26, ../sass/creation/_creation.scss */
+html {
+  color: #848d82;
+  /*All*/
+  font-size: 62.5%;
+  /*Typography responsive*/
+  /*@include at-breakpoint($iphone4) { font-size:52.5%;}
+   @include at-breakpoint($iphone4-landscape) { font-size:55.5%; }
+   @include at-breakpoint($iphone5-landscape) { font-size:58.5%; } */
+}
+
+/* line 36, ../sass/creation/_creation.scss */
+body {
+  /*$font1: 'Open Sans', sans-serif;*/
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  /*Typography responsive*/
+}
+@media (max-width: 320px) {
+  /* line 36, ../sass/creation/_creation.scss */
+  body {
+    font-size: 1rem;
+    line-height: 2rem;
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 36, ../sass/creation/_creation.scss */
+  body {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+    margin: 2.1rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 36, ../sass/creation/_creation.scss */
+  body {
+    font-size: 1.1rem;
+    line-height: 2.1rem;
+    margin: 2.1rem 0;
+  }
+}
+
+/*Syntax custom*/
+/* line 52, ../sass/creation/_creation.scss */
+code {
+  font-size: 1.2rem;
+  font-family: Consolas,Monaco,"Andale Mono",monospace;
+}
+
+/* line 53, ../sass/creation/_creation.scss */
+pre {
+  overflow-x: scroll !important;
+  overflow-y: scroll !important;
+}
+
+/*Typography responsive*/
+/* line 57, ../sass/creation/_creation.scss */
+h1 {
+  /*H1 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 57, ../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 57, ../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 57, ../sass/creation/_creation.scss */
+  h1 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+
+/* line 64, ../sass/creation/_creation.scss */
+h2 {
+  /*H2 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 64, ../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 64, ../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 64, ../sass/creation/_creation.scss */
+  h2 {
+    font-size: 4.18868rem;
+    line-height: 4.18868rem;
+    letter-spacing: -0.14429rem;
+    margin: 4.18868rem 0;
+  }
+}
+
+/* line 71, ../sass/creation/_creation.scss */
+h3, h2.title-doc {
+  /*H3 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 71, ../sass/creation/_creation.scss */
+  h3, h2.title-doc {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 71, ../sass/creation/_creation.scss */
+  h3, h2.title-doc {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 71, ../sass/creation/_creation.scss */
+  h3, h2.title-doc {
+    font-size: 2.5888rem;
+    line-height: 2.5888rem;
+    letter-spacing: -0.02rem;
+    margin: 2.5888rem 0;
+  }
+}
+
+/* line 78, ../sass/creation/_creation.scss */
+h5 {
+  /*H4 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 78, ../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 78, ../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 78, ../sass/creation/_creation.scss */
+  h5 {
+    font-size: 0.98888rem;
+    line-height: 0.98888rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+
+/* line 85, ../sass/creation/_creation.scss */
+h6, #s2 .creation-caption {
+  /*H4 responsive*/
+}
+@media (max-width: 320px) {
+  /* line 85, ../sass/creation/_creation.scss */
+  h6, #s2 .creation-caption {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 85, ../sass/creation/_creation.scss */
+  h6, #s2 .creation-caption {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 85, ../sass/creation/_creation.scss */
+  h6, #s2 .creation-caption {
+    font-size: 0.88999rem;
+    line-height: 0.88999rem;
+    letter-spacing: -0.02rem;
+    margin: 0.98888rem 0;
+  }
+}
+
+/*
+* 	Palette colors
+*	http://www.colourlovers.com/palette/147921/Blue_Kitten
+*
+$base01:#848D82;	 //
+$base02:#ECE59A;	 //
+$base03:#FD6E8A;	 //
+$base04:#2C3B63;	 //
+$base05:#EBEBEB;	 //
+*/
+/*Fluid images img { width:100%!important; }*/
+/* line 21, ../sass/doc.scss */
+.fluid-img {
+  width: 100%!important;
+}
+
+/* line 22, ../sass/doc.scss */
+.creation-grid {
+  text-align: right;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(6.38298%, #69e7b6), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #69e7b6), color-stop(14.89362%, #69e7b6), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #69e7b6), color-stop(23.40426%, #69e7b6), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #69e7b6), color-stop(31.91489%, #69e7b6), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #69e7b6), color-stop(40.42553%, #69e7b6), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #69e7b6), color-stop(48.93617%, #69e7b6), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #69e7b6), color-stop(57.44681%, #69e7b6), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #69e7b6), color-stop(65.95745%, #69e7b6), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #69e7b6), color-stop(74.46809%, #69e7b6), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #69e7b6), color-stop(82.97872%, #69e7b6), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #69e7b6), color-stop(91.48936%, #69e7b6), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #69e7b6), color-stop(100%, #69e7b6), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+  background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+  background-position: left top;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+  /*a {color:$base01 !important;}*/
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (max-width: 320px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 480px;
+    max-width: 30rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(20%, #69e7b6), color-stop(20%, #ffffff), color-stop(26.66667%, #ffffff), color-stop(26.66667%, #69e7b6), color-stop(46.66667%, #69e7b6), color-stop(46.66667%, #ffffff), color-stop(53.33333%, #ffffff), color-stop(53.33333%, #69e7b6), color-stop(73.33333%, #69e7b6), color-stop(73.33333%, #ffffff), color-stop(80.0%, #ffffff), color-stop(80%, #69e7b6), color-stop(100%, #69e7b6), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 20%, #ffffff 20%, #ffffff 26.66667%, #69e7b6 26.66667%, #69e7b6 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #69e7b6 53.33333%, #69e7b6 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #69e7b6 80%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 20%, #ffffff 20%, #ffffff 26.66667%, #69e7b6 26.66667%, #69e7b6 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #69e7b6 53.33333%, #69e7b6 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #69e7b6 80%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 20%, #ffffff 20%, #ffffff 26.66667%, #69e7b6 26.66667%, #69e7b6 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #69e7b6 53.33333%, #69e7b6 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #69e7b6 80%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 20%, #ffffff 20%, #ffffff 26.66667%, #69e7b6 26.66667%, #69e7b6 46.66667%, #ffffff 46.66667%, #ffffff 53.33333%, #69e7b6 53.33333%, #69e7b6 73.33333%, #ffffff 73.33333%, #ffffff 80.0%, #69e7b6 80%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 608px;
+    max-width: 38rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(15.78947%, #69e7b6), color-stop(15.78947%, #ffffff), color-stop(21.05263%, #ffffff), color-stop(21.05263%, #69e7b6), color-stop(36.84211%, #69e7b6), color-stop(36.84211%, #ffffff), color-stop(42.10526%, #ffffff), color-stop(42.10526%, #69e7b6), color-stop(57.89474%, #69e7b6), color-stop(57.89474%, #ffffff), color-stop(63.15789%, #ffffff), color-stop(63.15789%, #69e7b6), color-stop(78.94737%, #69e7b6), color-stop(78.94737%, #ffffff), color-stop(84.21053%, #ffffff), color-stop(84.21053%, #69e7b6), color-stop(100.0%, #69e7b6), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #69e7b6 21.05263%, #69e7b6 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #69e7b6 42.10526%, #69e7b6 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #69e7b6 63.15789%, #69e7b6 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #69e7b6 84.21053%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #69e7b6 21.05263%, #69e7b6 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #69e7b6 42.10526%, #69e7b6 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #69e7b6 63.15789%, #69e7b6 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #69e7b6 84.21053%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #69e7b6 21.05263%, #69e7b6 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #69e7b6 42.10526%, #69e7b6 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #69e7b6 63.15789%, #69e7b6 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #69e7b6 84.21053%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 15.78947%, #ffffff 15.78947%, #ffffff 21.05263%, #69e7b6 21.05263%, #69e7b6 36.84211%, #ffffff 36.84211%, #ffffff 42.10526%, #69e7b6 42.10526%, #69e7b6 57.89474%, #ffffff 57.89474%, #ffffff 63.15789%, #69e7b6 63.15789%, #69e7b6 78.94737%, #ffffff 78.94737%, #ffffff 84.21053%, #69e7b6 84.21053%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 736px;
+    max-width: 46rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(13.04348%, #69e7b6), color-stop(13.04348%, #ffffff), color-stop(17.3913%, #ffffff), color-stop(17.3913%, #69e7b6), color-stop(30.43478%, #69e7b6), color-stop(30.43478%, #ffffff), color-stop(34.78261%, #ffffff), color-stop(34.78261%, #69e7b6), color-stop(47.82609%, #69e7b6), color-stop(47.82609%, #ffffff), color-stop(52.17391%, #ffffff), color-stop(52.17391%, #69e7b6), color-stop(65.21739%, #69e7b6), color-stop(65.21739%, #ffffff), color-stop(69.56522%, #ffffff), color-stop(69.56522%, #69e7b6), color-stop(82.6087%, #69e7b6), color-stop(82.6087%, #ffffff), color-stop(86.95652%, #ffffff), color-stop(86.95652%, #69e7b6), color-stop(100%, #69e7b6), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #69e7b6 17.3913%, #69e7b6 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #69e7b6 34.78261%, #69e7b6 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #69e7b6 52.17391%, #69e7b6 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #69e7b6 69.56522%, #69e7b6 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #69e7b6 86.95652%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #69e7b6 17.3913%, #69e7b6 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #69e7b6 34.78261%, #69e7b6 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #69e7b6 52.17391%, #69e7b6 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #69e7b6 69.56522%, #69e7b6 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #69e7b6 86.95652%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #69e7b6 17.3913%, #69e7b6 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #69e7b6 34.78261%, #69e7b6 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #69e7b6 52.17391%, #69e7b6 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #69e7b6 69.56522%, #69e7b6 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #69e7b6 86.95652%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 13.04348%, #ffffff 13.04348%, #ffffff 17.3913%, #69e7b6 17.3913%, #69e7b6 30.43478%, #ffffff 30.43478%, #ffffff 34.78261%, #69e7b6 34.78261%, #69e7b6 47.82609%, #ffffff 47.82609%, #ffffff 52.17391%, #69e7b6 52.17391%, #69e7b6 65.21739%, #ffffff 65.21739%, #ffffff 69.56522%, #69e7b6 69.56522%, #69e7b6 82.6087%, #ffffff 82.6087%, #ffffff 86.95652%, #69e7b6 86.95652%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 992px;
+    max-width: 62rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(9.67742%, #69e7b6), color-stop(9.67742%, #ffffff), color-stop(12.90323%, #ffffff), color-stop(12.90323%, #69e7b6), color-stop(22.58065%, #69e7b6), color-stop(22.58065%, #ffffff), color-stop(25.80645%, #ffffff), color-stop(25.80645%, #69e7b6), color-stop(35.48387%, #69e7b6), color-stop(35.48387%, #ffffff), color-stop(38.70968%, #ffffff), color-stop(38.70968%, #69e7b6), color-stop(48.3871%, #69e7b6), color-stop(48.3871%, #ffffff), color-stop(51.6129%, #ffffff), color-stop(51.6129%, #69e7b6), color-stop(61.29032%, #69e7b6), color-stop(61.29032%, #ffffff), color-stop(64.51613%, #ffffff), color-stop(64.51613%, #69e7b6), color-stop(74.19355%, #69e7b6), color-stop(74.19355%, #ffffff), color-stop(77.41935%, #ffffff), color-stop(77.41935%, #69e7b6), color-stop(87.09677%, #69e7b6), color-stop(87.09677%, #ffffff), color-stop(90.32258%, #ffffff), color-stop(90.32258%, #69e7b6), color-stop(100.0%, #69e7b6), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #69e7b6 12.90323%, #69e7b6 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #69e7b6 25.80645%, #69e7b6 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #69e7b6 38.70968%, #69e7b6 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #69e7b6 51.6129%, #69e7b6 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #69e7b6 64.51613%, #69e7b6 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #69e7b6 77.41935%, #69e7b6 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #69e7b6 90.32258%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #69e7b6 12.90323%, #69e7b6 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #69e7b6 25.80645%, #69e7b6 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #69e7b6 38.70968%, #69e7b6 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #69e7b6 51.6129%, #69e7b6 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #69e7b6 64.51613%, #69e7b6 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #69e7b6 77.41935%, #69e7b6 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #69e7b6 90.32258%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #69e7b6 12.90323%, #69e7b6 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #69e7b6 25.80645%, #69e7b6 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #69e7b6 38.70968%, #69e7b6 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #69e7b6 51.6129%, #69e7b6 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #69e7b6 64.51613%, #69e7b6 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #69e7b6 77.41935%, #69e7b6 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #69e7b6 90.32258%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 9.67742%, #ffffff 9.67742%, #ffffff 12.90323%, #69e7b6 12.90323%, #69e7b6 22.58065%, #ffffff 22.58065%, #ffffff 25.80645%, #69e7b6 25.80645%, #69e7b6 35.48387%, #ffffff 35.48387%, #ffffff 38.70968%, #69e7b6 38.70968%, #69e7b6 48.3871%, #ffffff 48.3871%, #ffffff 51.6129%, #69e7b6 51.6129%, #69e7b6 61.29032%, #ffffff 61.29032%, #ffffff 64.51613%, #69e7b6 64.51613%, #69e7b6 74.19355%, #ffffff 74.19355%, #ffffff 77.41935%, #69e7b6 77.41935%, #69e7b6 87.09677%, #ffffff 87.09677%, #ffffff 90.32258%, #69e7b6 90.32258%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 1376px;
+    max-width: 86rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(6.97674%, #69e7b6), color-stop(6.97674%, #ffffff), color-stop(9.30233%, #ffffff), color-stop(9.30233%, #69e7b6), color-stop(16.27907%, #69e7b6), color-stop(16.27907%, #ffffff), color-stop(18.60465%, #ffffff), color-stop(18.60465%, #69e7b6), color-stop(25.5814%, #69e7b6), color-stop(25.5814%, #ffffff), color-stop(27.90698%, #ffffff), color-stop(27.90698%, #69e7b6), color-stop(34.88372%, #69e7b6), color-stop(34.88372%, #ffffff), color-stop(37.2093%, #ffffff), color-stop(37.2093%, #69e7b6), color-stop(44.18605%, #69e7b6), color-stop(44.18605%, #ffffff), color-stop(46.51163%, #ffffff), color-stop(46.51163%, #69e7b6), color-stop(53.48837%, #69e7b6), color-stop(53.48837%, #ffffff), color-stop(55.81395%, #ffffff), color-stop(55.81395%, #69e7b6), color-stop(62.7907%, #69e7b6), color-stop(62.7907%, #ffffff), color-stop(65.11628%, #ffffff), color-stop(65.11628%, #69e7b6), color-stop(72.09302%, #69e7b6), color-stop(72.09302%, #ffffff), color-stop(74.4186%, #ffffff), color-stop(74.4186%, #69e7b6), color-stop(81.39535%, #69e7b6), color-stop(81.39535%, #ffffff), color-stop(83.72093%, #ffffff), color-stop(83.72093%, #69e7b6), color-stop(90.69767%, #69e7b6), color-stop(90.69767%, #ffffff), color-stop(93.02326%, #ffffff), color-stop(93.02326%, #69e7b6), color-stop(100.0%, #69e7b6), color-stop(100.0%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #69e7b6 9.30233%, #69e7b6 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #69e7b6 18.60465%, #69e7b6 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #69e7b6 27.90698%, #69e7b6 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #69e7b6 37.2093%, #69e7b6 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #69e7b6 46.51163%, #69e7b6 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #69e7b6 55.81395%, #69e7b6 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #69e7b6 65.11628%, #69e7b6 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #69e7b6 74.4186%, #69e7b6 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #69e7b6 83.72093%, #69e7b6 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #69e7b6 93.02326%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #69e7b6 9.30233%, #69e7b6 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #69e7b6 18.60465%, #69e7b6 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #69e7b6 27.90698%, #69e7b6 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #69e7b6 37.2093%, #69e7b6 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #69e7b6 46.51163%, #69e7b6 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #69e7b6 55.81395%, #69e7b6 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #69e7b6 65.11628%, #69e7b6 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #69e7b6 74.4186%, #69e7b6 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #69e7b6 83.72093%, #69e7b6 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #69e7b6 93.02326%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #69e7b6 9.30233%, #69e7b6 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #69e7b6 18.60465%, #69e7b6 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #69e7b6 27.90698%, #69e7b6 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #69e7b6 37.2093%, #69e7b6 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #69e7b6 46.51163%, #69e7b6 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #69e7b6 55.81395%, #69e7b6 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #69e7b6 65.11628%, #69e7b6 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #69e7b6 74.4186%, #69e7b6 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #69e7b6 83.72093%, #69e7b6 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #69e7b6 93.02326%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.97674%, #ffffff 6.97674%, #ffffff 9.30233%, #69e7b6 9.30233%, #69e7b6 16.27907%, #ffffff 16.27907%, #ffffff 18.60465%, #69e7b6 18.60465%, #69e7b6 25.5814%, #ffffff 25.5814%, #ffffff 27.90698%, #69e7b6 27.90698%, #69e7b6 34.88372%, #ffffff 34.88372%, #ffffff 37.2093%, #69e7b6 37.2093%, #69e7b6 44.18605%, #ffffff 44.18605%, #ffffff 46.51163%, #69e7b6 46.51163%, #69e7b6 53.48837%, #ffffff 53.48837%, #ffffff 55.81395%, #69e7b6 55.81395%, #69e7b6 62.7907%, #ffffff 62.7907%, #ffffff 65.11628%, #69e7b6 65.11628%, #69e7b6 72.09302%, #ffffff 72.09302%, #ffffff 74.4186%, #69e7b6 74.4186%, #69e7b6 81.39535%, #ffffff 81.39535%, #ffffff 83.72093%, #69e7b6 83.72093%, #69e7b6 90.69767%, #ffffff 90.69767%, #ffffff 93.02326%, #69e7b6 93.02326%, #69e7b6 100.0%, #ffffff 100.0%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+@media (min-width: 940px) {
+  /* line 22, ../sass/doc.scss */
+  .creation-grid {
+    max-width: 1504px;
+    max-width: 94rem;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(0%, #69e7b6), color-stop(6.38298%, #69e7b6), color-stop(6.38298%, #ffffff), color-stop(8.51064%, #ffffff), color-stop(8.51064%, #69e7b6), color-stop(14.89362%, #69e7b6), color-stop(14.89362%, #ffffff), color-stop(17.02128%, #ffffff), color-stop(17.02128%, #69e7b6), color-stop(23.40426%, #69e7b6), color-stop(23.40426%, #ffffff), color-stop(25.53191%, #ffffff), color-stop(25.53191%, #69e7b6), color-stop(31.91489%, #69e7b6), color-stop(31.91489%, #ffffff), color-stop(34.04255%, #ffffff), color-stop(34.04255%, #69e7b6), color-stop(40.42553%, #69e7b6), color-stop(40.42553%, #ffffff), color-stop(42.55319%, #ffffff), color-stop(42.55319%, #69e7b6), color-stop(48.93617%, #69e7b6), color-stop(48.93617%, #ffffff), color-stop(51.06383%, #ffffff), color-stop(51.06383%, #69e7b6), color-stop(57.44681%, #69e7b6), color-stop(57.44681%, #ffffff), color-stop(59.57447%, #ffffff), color-stop(59.57447%, #69e7b6), color-stop(65.95745%, #69e7b6), color-stop(65.95745%, #ffffff), color-stop(68.08511%, #ffffff), color-stop(68.08511%, #69e7b6), color-stop(74.46809%, #69e7b6), color-stop(74.46809%, #ffffff), color-stop(76.59574%, #ffffff), color-stop(76.59574%, #69e7b6), color-stop(82.97872%, #69e7b6), color-stop(82.97872%, #ffffff), color-stop(85.10638%, #ffffff), color-stop(85.10638%, #69e7b6), color-stop(91.48936%, #69e7b6), color-stop(91.48936%, #ffffff), color-stop(93.61702%, #ffffff), color-stop(93.61702%, #69e7b6), color-stop(100%, #69e7b6), color-stop(100%, #ffffff), color-stop(100%, #ffffff));
+    background-image: -webkit-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -moz-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: -o-linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-image: linear-gradient(left, #ffffff 0%, #69e7b6 0%, #69e7b6 6.38298%, #ffffff 6.38298%, #ffffff 8.51064%, #69e7b6 8.51064%, #69e7b6 14.89362%, #ffffff 14.89362%, #ffffff 17.02128%, #69e7b6 17.02128%, #69e7b6 23.40426%, #ffffff 23.40426%, #ffffff 25.53191%, #69e7b6 25.53191%, #69e7b6 31.91489%, #ffffff 31.91489%, #ffffff 34.04255%, #69e7b6 34.04255%, #69e7b6 40.42553%, #ffffff 40.42553%, #ffffff 42.55319%, #69e7b6 42.55319%, #69e7b6 48.93617%, #ffffff 48.93617%, #ffffff 51.06383%, #69e7b6 51.06383%, #69e7b6 57.44681%, #ffffff 57.44681%, #ffffff 59.57447%, #69e7b6 59.57447%, #69e7b6 65.95745%, #ffffff 65.95745%, #ffffff 68.08511%, #69e7b6 68.08511%, #69e7b6 74.46809%, #ffffff 74.46809%, #ffffff 76.59574%, #69e7b6 76.59574%, #69e7b6 82.97872%, #ffffff 82.97872%, #ffffff 85.10638%, #69e7b6 85.10638%, #69e7b6 91.48936%, #ffffff 91.48936%, #ffffff 93.61702%, #69e7b6 93.61702%, #69e7b6 100%, #ffffff 100%, #ffffff 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+/* line 23, ../sass/doc.scss */
+.creation-grid a {
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+/* Header Doc*/
+/* line 30, ../sass/doc.scss */
+header {
+  background-color: #fd6e8a;
+  padding: 90px 0 2.5rem 0;
+  text-align: center;
+  color: #fff;
+}
+/* line 32, ../sass/doc.scss */
+header .container {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+header .container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 32, ../sass/doc.scss */
+  header .container {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 35, ../sass/doc.scss */
+header p {
+  color: #ffecef;
+  line-height: 1.4;
+  font-size: 21px;
+  font-weight: normal;
+}
+/* line 36, ../sass/doc.scss */
+header h1 {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-size: 50px;
+  margin: 20px 0 3px 0;
+  line-height: 5rem;
+}
+/* line 38, ../sass/doc.scss */
+header .btn-down {
+  display: inline-block;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid #ffecef;
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 18px;
+  transition-delay: 0s;
+  transition-duration: 0.1s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+/* line 45, ../sass/doc.scss */
+header .btn-down:hover {
+  background-color: #fff;
+  color: #848d82;
+  text-decoration: none;
+}
+/* line 46, ../sass/doc.scss */
+header ul {
+  font-size: 14px;
+  margin: 2.5rem 0;
+  list-style: none;
+}
+/* line 50, ../sass/doc.scss */
+header ul li {
+  display: inline;
+}
+/* line 51, ../sass/doc.scss */
+header ul li a {
+  color: #ffecef;
+  font-weight: normal;
+}
+/* line 52, ../sass/doc.scss */
+header ul li a:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+}
+/* line 54, ../sass/doc.scss */
+header ul li + li {
+  margin-left: 20px;
+}
+
+/* Navigation doc */
+/* line 59, ../sass/doc.scss */
+nav {
+  position: fixed;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  background-color: #ebebeb;
+  z-index: 1000;
+}
+/* line 61, ../sass/doc.scss */
+nav ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 63, ../sass/doc.scss */
+nav ul li {
+  display: inline;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+/*Title docs page*/
+/* line 69, ../sass/doc.scss */
+h1.title-doc {
+  padding-top: 80px;
+  word-wrap: break-word;
+  letter-spacing: 0;
+  margin: 1rem 0;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 5rem;
+}
+
+/* line 72, ../sass/doc.scss */
+h2.title-doc {
+  background-color: #ece59a;
+  padding: 1%;
+  color: #2c3b63;
+  font-weight: 500;
+  word-wrap: break-word;
+  letter-spacing: 0;
+  margin: 1rem 0;
+}
+
+/* Palette colors*/
+/* line 76, ../sass/doc.scss */
+#palette-colors {
+  list-style: none;
+  padding: 0;
+  /* #464646 #EBEBEB #0083A9 #F0F7F9 #014B60*/
+}
+/* line 78, ../sass/doc.scss */
+#palette-colors li {
+  width: 17.94872%;
+  float: left;
+  margin-right: 2.5641%;
+  display: inline;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  /*margin:3rem 0;*/
+  color: #ccc;
+  display: inline-block;
+  /*width:180px;*/
+  height: 350px;
+  text-align: center;
+}
+/* line 184, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-1.0.9/sass/susy/_grid.scss */
+#palette-colors li:nth-child(5n) {
+  float: right;
+  margin-right: 0;
+}
+/* line 80, ../sass/doc.scss */
+#palette-colors li i {
+  color: #ccc;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+/* line 81, ../sass/doc.scss */
+#palette-colors li h5 {
+  padding-top: 30px;
+  margin-bottom: 3px;
+}
+/* line 83, ../sass/doc.scss */
+#palette-colors li:first-child {
+  background-color: #848d82;
+}
+/* line 84, ../sass/doc.scss */
+#palette-colors li:nth-child(2) {
+  background-color: #ece59a;
+}
+/* line 85, ../sass/doc.scss */
+#palette-colors li:nth-child(3) {
+  background-color: #fd6e8a;
+}
+/* line 86, ../sass/doc.scss */
+#palette-colors li:nth-child(4) {
+  background-color: #2c3b63;
+}
+/* line 87, ../sass/doc.scss */
+#palette-colors li:last-child {
+  background-color: #ebebeb;
+}
+
+/* line 90, ../sass/doc.scss */
+#tonalitats {
+  list-style: none;
+  padding: 0;
+}
+/* line 92, ../sass/doc.scss */
+#tonalitats li {
+  width: 17.94872%;
+  float: left;
+  margin-right: 2.5641%;
+  display: inline;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  /*margin:3rem 0;*/
+  color: #ccc;
+  display: inline-block;
+  /*width:180px;*/
+  height: 350px;
+  text-align: center;
+}
+/* line 184, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/susy-1.0.9/sass/susy/_grid.scss */
+#tonalitats li:nth-child(5n) {
+  float: right;
+  margin-right: 0;
+}
+/* line 94, ../sass/doc.scss */
+#tonalitats li i {
+  color: #ccc;
+  display: block;
+  position: relative;
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+/* line 95, ../sass/doc.scss */
+#tonalitats li h5 {
+  padding-top: 30px;
+  margin-bottom: 3px;
+}
+/* line 97, ../sass/doc.scss */
+#tonalitats li:first-child {
+  background-color: #fea0b3;
+}
+/* line 98, ../sass/doc.scss */
+#tonalitats li:nth-child(2) {
+  background-color: #feb9c7;
+}
+/* line 99, ../sass/doc.scss */
+#tonalitats li:nth-child(3) {
+  background-color: #fed3db;
+}
+/* line 100, ../sass/doc.scss */
+#tonalitats li:nth-child(4) {
+  background-color: #ffecef;
+}
+/* line 101, ../sass/doc.scss */
+#tonalitats li:last-child {
+  background-color: white;
+}
+
+/*typography*/
+/* line 104, ../sass/doc.scss */
+#s1 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 104, ../sass/doc.scss */
+  #s1 {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 105, ../sass/doc.scss */
+#s1 article:hover {
+  /*@include creation-container-show;*/
+}
+
+/*Images sources*/
+/* line 134, ../sass/doc.scss */
+#s2 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 134, ../sass/doc.scss */
+  #s2 {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 135, ../sass/doc.scss */
+#s2 article:hover {
+  /*@include creation-container-show;*/
+}
+/* line 136, ../sass/doc.scss */
+#s2 .slider-home {
+  overflow-x: hidden;
+}
+/* line 137, ../sass/doc.scss */
+#s2 .slider-home .dipta-slider-home {
+  position: absolute;
+  margin: -290px 0 0 30px;
+}
+/* line 139, ../sass/doc.scss */
+#s2 .slider-home img {
+  height: auto;
+}
+
+/*navigation*/
+/* line 149, ../sass/doc.scss */
+#s3 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s3:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 149, ../sass/doc.scss */
+  #s3 {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 150, ../sass/doc.scss */
+#s3 article:hover {
+  /*@include creation-container-show;*/
+}
+
+/* line 171, ../sass/doc.scss */
+#s5, #s7, #s4, #s8 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s5:after, #s7:after, #s4:after, #s8:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 171, ../sass/doc.scss */
+  #s5, #s7, #s4, #s8 {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 173, ../sass/doc.scss */
+#s5 article:hover, #s7 article:hover, #s4 article:hover, #s8 article:hover {
+  /*@include creation-container-show;*/
+}
+
+/*bloc*/
+/* line 177, ../sass/doc.scss */
+#s6 {
+  *zoom: 1;
+  max-width: 1504px;
+  max-width: 94rem;
+  _width: 1504px;
+  padding-left: 32px;
+  padding-left: 2rem;
+  padding-right: 32px;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#s6:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 320px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 480px;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 608px;
+    max-width: 38rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 568px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 736px;
+    max-width: 46rem;
+  }
+}
+@media (min-width: 569px) and (max-width: 767px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 992px;
+    max-width: 62rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 939px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 1376px;
+    max-width: 86rem;
+  }
+}
+@media (min-width: 940px) {
+  /* line 177, ../sass/doc.scss */
+  #s6 {
+    max-width: 1504px;
+    max-width: 94rem;
+  }
+}
+/* line 179, ../sass/doc.scss */
+#s6 .bloc1 {
+  display: inline-block;
+}
+/* line 181, ../sass/doc.scss */
+#s6 .bloc1 .contingut {
+  background-color: #fff;
+}
+/* line 184, ../sass/doc.scss */
+#s6 .bloc2 {
+  display: inline-block;
+}
+/* line 185, ../sass/doc.scss */
+#s6 .bloc2 h2 {
+  background-color: #2c3b63;
+  border-bottom-color: #fff;
+}
+/* line 186, ../sass/doc.scss */
+#s6 .bloc2 .contingut {
+  background-color: #2c3b63;
+}
+/* line 190, ../sass/doc.scss */
+#s6 .bloc3 {
+  display: inline-block;
+}
+/* line 192, ../sass/doc.scss */
+#s6 .bloc3 .contingut {
+  background-color: #fff;
+}
+/* line 195, ../sass/doc.scss */
+#s6 .bloc4 {
+  display: inline-block;
+}
+/* line 196, ../sass/doc.scss */
+#s6 .bloc4 h2 {
+  background-color: #2c3b63;
+  border-bottom-color: #fff;
+}
+/* line 197, ../sass/doc.scss */
+#s6 .bloc4 .contingut {
+  background-color: #2c3b63;
+}
+
+/*Footter doc */
+/* line 204, ../sass/doc.scss */
+footer {
+  background-color: #848d82;
+  margin: 15rem 0 0 0;
+  padding: 1rem 0;
+  color: #fff;
+  text-align: center;
+  border-top: solid 2.5rem #ebebeb;
+}
+/* line 205, ../sass/doc.scss */
+footer h1, footer h2, footer h3, footer h2.title-doc, footer h4, footer h5 {
+  margin: 0;
+}
+/* line 209, ../sass/doc.scss */
+footer h5 {
+  margin: 0;
+}

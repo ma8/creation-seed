@@ -1,0 +1,27 @@
+/*
+*	Footer 
+*   http://www.responsinator.com
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html
+*/
+
+/* Mixins */
+	
+
+/* Responsive */
+.footer-content {// @include dipta-grid-color-change;
+	@include container; @include creation-container-width;
+	/*All*/		
+		@include at-breakpoint($iphone4) {		
+		}//	
+		@include at-breakpoint($iphone4-landscape) {
+		}//
+		@include at-breakpoint($iphone5-landscape) { 	
+		}//
+		@include at-breakpoint($kindle) {
+		}//
+		@include at-breakpoint($ipad) {  
+		}//
+		@include at-breakpoint($ipad-landscape) { 
+		}//
+}
+.footer-content :hover{ /*@include creation-grid-show;*/}

@@ -1,0 +1,28 @@
+/**
+* 	Palette colors
+*	http://www.colourlovers.com/palette/147921/Blue_Kitten
+*	http://sass-lang.com/docs/yardoc/Sass/Script/Functions.html	
+*/
+
+/*
+lighten($color, $amount)
+darken($color, $amount)
+saturate($color, $amount)
+desaturate($color, $amount)
+grayscale($color)
+invert($color)
+
+*/
+
+$base01:#848D82;		/*  */
+$base02:#ECE59A;	/*  */
+$base03:#FD6E8A;	/*  */
+$base04:#2C3B63;	/*  */
+$base05:#EBEBEB;	/*  */
+
+/* Tonalitats */
+$base03d1:darken($base03, 10%);
+$base03d2:darken($base03, 20%);
+$base03l1:lighten($base03, 10%);
+$base03l2:lighten($base03, 20%);
+

@@ -1,0 +1,64 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:400,300,700,400italic,100);
+/**
+ * @file
+ * Comment Styling
+ */
+/* line 10, ../../sass/partials/comments.scss */
+.comments {
+  /* Wrapper for the list of comments and its title */
+  margin: 1.5em 0;
+}
+
+/* line 14, ../../sass/partials/comments.scss */
+.comment {
+  /* Wrapper for a single comment */
+}
+/* line 16, ../../sass/partials/comments.scss */
+.comment.comment-preview {
+  /* Preview of the comment before submitting new or updated comment */
+  background-color: #ffffea;
+  /* Drupal core will use a #ffffea background. See #1110842 */
+}
+/* line 20, ../../sass/partials/comments.scss */
+.comment .new {
+  /* "New" marker for comments that are new for the current user */
+  color: #c00;
+}
+/* line 24, ../../sass/partials/comments.scss */
+.comment .permalink {
+  /* Comment's permalink wrapper */
+  text-transform: uppercase;
+  font-size: 75%;
+}
+
+/* line 30, ../../sass/partials/comments.scss */
+.indented {
+  /* Nested comments are indented */
+  margin-left: 25px;
+  /* Drupal core uses a 25px left margin */
+}
+
+/* line 34, ../../sass/partials/comments.scss */
+.comment-unpublished {
+  /* Unpublished comments */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 37, ../../sass/partials/comments.scss */
+.comment-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+/* line 55, ../../sass/_custom.scss */
+.lt-ie8 .comment-unpublished p.unpublished > * {
+  position: relative;
+}

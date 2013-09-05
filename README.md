@@ -1,4 +1,0 @@
-creation-seed
-=============
-
-creation-seed
